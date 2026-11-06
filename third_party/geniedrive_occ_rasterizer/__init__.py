@@ -1,0 +1,1 @@
+"""Vendored GenieDrive occupancy rasterizer."""

@@ -1,0 +1,72 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Compiled extensions and package build output
+*.so
+*.o
+*.a
+*.egg-info/
+*.egg
+build/
+/dist/
+.eggs/
+CMakeFiles/
+CMakeCache.txt
+
+.dist_test/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and download caches
+/.venv/
+/venv/
+/env/
+/.cache/
+.ipynb_checkpoints/
+.DS_Store
+*.swp
+*.swo
+
+.vscode/
+.idea/
+
+# Local agent and account configuration
+/.agents/
+/.aws/
+/.codex/
+.env
+.env.*
+!.env.example
+
+# Local manuscript drafts
+/CVPR2027_*.pdf
+
+ckpts/
+data/
+work_dirs/
+/temp/
+/tmp/
+
+# Model weights and generated videos
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.mp4
+*.avi
+*.mov
+*.webm
+
+*.log
+
+# Local Waymo dataset archives
+/waymo_train/
+
+# Downloaded evaluation sources
+/externals/W-CODA2024-Track2/
+/externals/WorldLens/
