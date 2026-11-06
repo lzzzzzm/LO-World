@@ -35,6 +35,7 @@ htmlcov/
 .idea/
 
 # Local agent and account configuration
+/AGENTS.md
 /.agents/
 /.aws/
 /.codex/
