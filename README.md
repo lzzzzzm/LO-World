@@ -8,7 +8,7 @@ latent space. At 2 Hz, its 6-frame and 12-frame models predict 3 and 6 seconds.
 <!-- demo:start -->
 ## Demo
 
-[Watch the demo · 45 seconds · 720p](work_dirs/promo/loworld_demo.mp4)
+https://github.com/user-attachments/assets/6d579523-b6f2-42f4-98c5-ddffa46fc550
 <!-- demo:end -->
 
 ## Installation
