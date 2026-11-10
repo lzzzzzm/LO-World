@@ -10,7 +10,7 @@
 <!-- demo:start -->
 ## Demo
 
-<img width="576" height="324" alt="LO-World demo" src="https://github.com/user-attachments/assets/e36e3308-cbe8-4125-b0cf-7f0ffcb815cd" />
+https://github.com/user-attachments/assets/e6868626-de79-4d8b-8dcc-17f4a6f35fd7
 <!-- demo:end -->
 
 ## Installation
