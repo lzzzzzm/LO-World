@@ -1,14 +1,16 @@
 <h1 align="center">LO-World: Unified BEV Latent Modeling for Joint 4D Occupancy and LiDAR Forecasting</h1>
 
-LO-World predicts future 3D occupancy and LiDAR observations in a shared BEV
-latent space. At 2 Hz, its 6-frame and 12-frame models predict 3 and 6 seconds.
+<p align="center">
+  <a href="https://arxiv.org/abs/2611.11912"><img src="https://img.shields.io/badge/arXiv-2611.11912-b31b1b.svg" alt="arXiv paper"></a>
+  <a href="https://huggingface.co/JimmyLiaoo/LO-World"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-yellow" alt="Hugging Face models"></a>
+</p>
 
 > 💬 Questions about installation or usage? Please open an issue in this repository.
 
 <!-- demo:start -->
 ## Demo
 
-https://github.com/user-attachments/assets/6d579523-b6f2-42f4-98c5-ddffa46fc550
+<img width="576" height="324" alt="LO-World demo" src="https://github.com/user-attachments/assets/e36e3308-cbe8-4125-b0cf-7f0ffcb815cd" />
 <!-- demo:end -->
 
 ## Installation
@@ -229,6 +231,22 @@ Outputs under `work_dirs/visualization/scene_0001/`:
 - `overview.gif`: combined six-camera and OCC/LiDAR preview.
 - `video/000000_grid.mp4`: six-camera grid video.
 - `video/000000_CAM_*.mp4`: individual camera videos.
+
+## Citation
+
+If you find LO-World useful in your research, please cite our paper:
+
+```bibtex
+@misc{liao2026loworld,
+  title={LO-World: Unified BEV Latent Modeling for Joint 4D Occupancy and LiDAR Forecasting},
+  author={Zhimin Liao and Ping Wei and Kai Mao and Shuaijia Chen},
+  year={2026},
+  eprint={2611.11912},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2611.11912}
+}
+```
 
 ## Acknowledgements
 
