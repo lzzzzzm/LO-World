@@ -1,6 +1,7 @@
 <h1 align="center">LO-World: Unified BEV Latent Modeling for Joint 4D Occupancy and LiDAR Forecasting</h1>
 
 <p align="center">
+  <a href="https://lzzzzzm.github.io/LO-World/"><img src="https://img.shields.io/badge/Project-Page-416ddd.svg" alt="LO-World project page"></a>
   <a href="https://arxiv.org/abs/2611.11912"><img src="https://img.shields.io/badge/arXiv-2611.11912-b31b1b.svg" alt="arXiv paper"></a>
   <a href="https://huggingface.co/JimmyLiaoo/LO-World"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-yellow" alt="Hugging Face models"></a>
 </p>
@@ -178,7 +179,7 @@ data/waymo/
 
 ## Project guides
 
-- [Project website](docs/github_pages.md): local preview and GitHub Pages hosting for the interactive LiDAR comparison.
+- [Project website](https://lzzzzzm.github.io/LO-World/): interactive occupancy and LiDAR comparisons, trajectory control, multimodal generation, and paper results. See the [website guide](docs/github_pages.md) for local preview and deployment.
 - [Installation](#installation)
 - [Data preparation](docs/data_preparation.md): pretrained downloads, nuScenes, BEVLayout, and Waymo inputs.
 - [Inference and evaluation](docs/inference_evaluation.md): World Model prediction, GenieDrive video generation, and metrics.
