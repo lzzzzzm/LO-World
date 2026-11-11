@@ -1,0 +1,2545 @@
+{
+  "protocol": {
+    "hz": 12,
+    "frame_count": 81,
+    "future_frames": 80,
+    "horizon_seconds": 6.666666666666667,
+    "camera_order": [
+      "CAM_FRONT_LEFT",
+      "CAM_FRONT",
+      "CAM_FRONT_RIGHT",
+      "CAM_BACK_LEFT",
+      "CAM_BACK",
+      "CAM_BACK_RIGHT"
+    ],
+    "world_model": "LO-World",
+    "rgb_model": "GenieDrive",
+    "world_checkpoint": "bev_world_12f_layout_autoregressive.pth",
+    "rgb_checkpoint": "geniedrive_448x800.safetensors",
+    "world_seed": 0,
+    "rgb_seed": 43,
+    "use_bev_layout": true,
+    "timeline_version": "raw_pose_instance_tracks_uniform_v1",
+    "modalities": [
+      "six-camera RGB",
+      "six-camera semantic projection",
+      "occupancy",
+      "LiDAR"
+    ],
+    "pipeline": "LO-World jointly predicts occupancy and LiDAR; semantic views projected from predicted occupancy condition GenieDrive RGB generation",
+    "frame_alignment": "Identical physical timestamps and frame indices across all 14 views; frame 0 is the current state",
+    "camera_resolution": [
+      800,
+      448
+    ],
+    "semantic_resolution": [
+      800,
+      450
+    ],
+    "mirrored": false,
+    "grid_shape": [
+      200,
+      200,
+      16
+    ],
+    "voxel_size_m": 0.4
+  },
+  "scenes": [
+    {
+      "id": "scene-0013",
+      "title": "Following a bus",
+      "current_token": "b9c60cfaf1814c8bb363037dec7abd35",
+      "preview": "assets/fullmodal/scene-0013/preview.jpg",
+      "frame_timestamps_us": [
+        1531885340047243,
+        1531885340130576,
+        1531885340213910,
+        1531885340297243,
+        1531885340380576,
+        1531885340463910,
+        1531885340547243,
+        1531885340630576,
+        1531885340713910,
+        1531885340797243,
+        1531885340880576,
+        1531885340963910,
+        1531885341047243,
+        1531885341130576,
+        1531885341213910,
+        1531885341297243,
+        1531885341380576,
+        1531885341463910,
+        1531885341547243,
+        1531885341630576,
+        1531885341713910,
+        1531885341797243,
+        1531885341880576,
+        1531885341963910,
+        1531885342047243,
+        1531885342130576,
+        1531885342213910,
+        1531885342297243,
+        1531885342380576,
+        1531885342463910,
+        1531885342547243,
+        1531885342630576,
+        1531885342713910,
+        1531885342797243,
+        1531885342880576,
+        1531885342963910,
+        1531885343047243,
+        1531885343130576,
+        1531885343213910,
+        1531885343297243,
+        1531885343380576,
+        1531885343463910,
+        1531885343547243,
+        1531885343630576,
+        1531885343713910,
+        1531885343797243,
+        1531885343880576,
+        1531885343963910,
+        1531885344047243,
+        1531885344130576,
+        1531885344213910,
+        1531885344297243,
+        1531885344380576,
+        1531885344463910,
+        1531885344547243,
+        1531885344630576,
+        1531885344713910,
+        1531885344797243,
+        1531885344880576,
+        1531885344963910,
+        1531885345047243,
+        1531885345130576,
+        1531885345213910,
+        1531885345297243,
+        1531885345380576,
+        1531885345463910,
+        1531885345547243,
+        1531885345630576,
+        1531885345713910,
+        1531885345797243,
+        1531885345880576,
+        1531885345963910,
+        1531885346047243,
+        1531885346130576,
+        1531885346213910,
+        1531885346297243,
+        1531885346380576,
+        1531885346463910,
+        1531885346547243,
+        1531885346630576,
+        1531885346713910
+      ],
+      "frames": [
+        {
+          "seconds": 0.0,
+          "voxel_count": 25819,
+          "point_count": 25395
+        },
+        {
+          "seconds": 0.08333333333333333,
+          "voxel_count": 27142,
+          "point_count": 25347
+        },
+        {
+          "seconds": 0.16666666666666666,
+          "voxel_count": 27625,
+          "point_count": 25322
+        },
+        {
+          "seconds": 0.25,
+          "voxel_count": 28062,
+          "point_count": 25264
+        },
+        {
+          "seconds": 0.3333333333333333,
+          "voxel_count": 28053,
+          "point_count": 25226
+        },
+        {
+          "seconds": 0.4166666666666667,
+          "voxel_count": 28262,
+          "point_count": 25207
+        },
+        {
+          "seconds": 0.5,
+          "voxel_count": 28217,
+          "point_count": 25205
+        },
+        {
+          "seconds": 0.5833333333333334,
+          "voxel_count": 29029,
+          "point_count": 25145
+        },
+        {
+          "seconds": 0.6666666666666666,
+          "voxel_count": 29017,
+          "point_count": 25102
+        },
+        {
+          "seconds": 0.75,
+          "voxel_count": 29868,
+          "point_count": 24885
+        },
+        {
+          "seconds": 0.8333333333333334,
+          "voxel_count": 29675,
+          "point_count": 24857
+        },
+        {
+          "seconds": 0.9166666666666666,
+          "voxel_count": 30184,
+          "point_count": 24960
+        },
+        {
+          "seconds": 1.0,
+          "voxel_count": 30099,
+          "point_count": 25000
+        },
+        {
+          "seconds": 1.0833333333333333,
+          "voxel_count": 31288,
+          "point_count": 24841
+        },
+        {
+          "seconds": 1.1666666666666667,
+          "voxel_count": 30714,
+          "point_count": 24769
+        },
+        {
+          "seconds": 1.25,
+          "voxel_count": 31260,
+          "point_count": 24650
+        },
+        {
+          "seconds": 1.3333333333333333,
+          "voxel_count": 31286,
+          "point_count": 24626
+        },
+        {
+          "seconds": 1.4166666666666667,
+          "voxel_count": 31588,
+          "point_count": 24641
+        },
+        {
+          "seconds": 1.5,
+          "voxel_count": 32500,
+          "point_count": 24637
+        },
+        {
+          "seconds": 1.5833333333333333,
+          "voxel_count": 32725,
+          "point_count": 24592
+        },
+        {
+          "seconds": 1.6666666666666667,
+          "voxel_count": 32807,
+          "point_count": 24573
+        },
+        {
+          "seconds": 1.75,
+          "voxel_count": 32557,
+          "point_count": 24539
+        },
+        {
+          "seconds": 1.8333333333333333,
+          "voxel_count": 33208,
+          "point_count": 24294
+        },
+        {
+          "seconds": 1.9166666666666667,
+          "voxel_count": 33711,
+          "point_count": 24545
+        },
+        {
+          "seconds": 2.0,
+          "voxel_count": 33270,
+          "point_count": 24673
+        },
+        {
+          "seconds": 2.0833333333333335,
+          "voxel_count": 33559,
+          "point_count": 24696
+        },
+        {
+          "seconds": 2.1666666666666665,
+          "voxel_count": 33780,
+          "point_count": 24595
+        },
+        {
+          "seconds": 2.25,
+          "voxel_count": 34221,
+          "point_count": 24387
+        },
+        {
+          "seconds": 2.3333333333333335,
+          "voxel_count": 33486,
+          "point_count": 24448
+        },
+        {
+          "seconds": 2.4166666666666665,
+          "voxel_count": 34513,
+          "point_count": 24670
+        },
+        {
+          "seconds": 2.5,
+          "voxel_count": 33561,
+          "point_count": 24388
+        },
+        {
+          "seconds": 2.5833333333333335,
+          "voxel_count": 33894,
+          "point_count": 24449
+        },
+        {
+          "seconds": 2.6666666666666665,
+          "voxel_count": 33958,
+          "point_count": 24268
+        },
+        {
+          "seconds": 2.75,
+          "voxel_count": 34596,
+          "point_count": 24270
+        },
+        {
+          "seconds": 2.8333333333333335,
+          "voxel_count": 34299,
+          "point_count": 24070
+        },
+        {
+          "seconds": 2.9166666666666665,
+          "voxel_count": 35431,
+          "point_count": 24324
+        },
+        {
+          "seconds": 3.0,
+          "voxel_count": 33472,
+          "point_count": 24335
+        },
+        {
+          "seconds": 3.0833333333333335,
+          "voxel_count": 34023,
+          "point_count": 24297
+        },
+        {
+          "seconds": 3.1666666666666665,
+          "voxel_count": 34816,
+          "point_count": 24106
+        },
+        {
+          "seconds": 3.25,
+          "voxel_count": 33837,
+          "point_count": 23909
+        },
+        {
+          "seconds": 3.3333333333333335,
+          "voxel_count": 33408,
+          "point_count": 23813
+        },
+        {
+          "seconds": 3.4166666666666665,
+          "voxel_count": 35806,
+          "point_count": 23988
+        },
+        {
+          "seconds": 3.5,
+          "voxel_count": 34293,
+          "point_count": 23805
+        },
+        {
+          "seconds": 3.5833333333333335,
+          "voxel_count": 33935,
+          "point_count": 23302
+        },
+        {
+          "seconds": 3.6666666666666665,
+          "voxel_count": 34176,
+          "point_count": 23371
+        },
+        {
+          "seconds": 3.75,
+          "voxel_count": 34204,
+          "point_count": 23161
+        },
+        {
+          "seconds": 3.8333333333333335,
+          "voxel_count": 33844,
+          "point_count": 23345
+        },
+        {
+          "seconds": 3.9166666666666665,
+          "voxel_count": 33915,
+          "point_count": 23657
+        },
+        {
+          "seconds": 4.0,
+          "voxel_count": 33850,
+          "point_count": 23635
+        },
+        {
+          "seconds": 4.083333333333333,
+          "voxel_count": 32669,
+          "point_count": 23316
+        },
+        {
+          "seconds": 4.166666666666667,
+          "voxel_count": 32489,
+          "point_count": 22954
+        },
+        {
+          "seconds": 4.25,
+          "voxel_count": 33023,
+          "point_count": 22887
+        },
+        {
+          "seconds": 4.333333333333333,
+          "voxel_count": 32325,
+          "point_count": 22938
+        },
+        {
+          "seconds": 4.416666666666667,
+          "voxel_count": 32230,
+          "point_count": 22916
+        },
+        {
+          "seconds": 4.5,
+          "voxel_count": 31137,
+          "point_count": 22664
+        },
+        {
+          "seconds": 4.583333333333333,
+          "voxel_count": 31303,
+          "point_count": 22390
+        },
+        {
+          "seconds": 4.666666666666667,
+          "voxel_count": 31009,
+          "point_count": 22374
+        },
+        {
+          "seconds": 4.75,
+          "voxel_count": 30996,
+          "point_count": 22291
+        },
+        {
+          "seconds": 4.833333333333333,
+          "voxel_count": 30756,
+          "point_count": 22253
+        },
+        {
+          "seconds": 4.916666666666667,
+          "voxel_count": 30813,
+          "point_count": 22395
+        },
+        {
+          "seconds": 5.0,
+          "voxel_count": 30018,
+          "point_count": 22428
+        },
+        {
+          "seconds": 5.083333333333333,
+          "voxel_count": 29671,
+          "point_count": 21936
+        },
+        {
+          "seconds": 5.166666666666667,
+          "voxel_count": 30243,
+          "point_count": 21777
+        },
+        {
+          "seconds": 5.25,
+          "voxel_count": 29859,
+          "point_count": 21629
+        },
+        {
+          "seconds": 5.333333333333333,
+          "voxel_count": 29680,
+          "point_count": 21655
+        },
+        {
+          "seconds": 5.416666666666667,
+          "voxel_count": 28972,
+          "point_count": 21765
+        },
+        {
+          "seconds": 5.5,
+          "voxel_count": 28943,
+          "point_count": 21703
+        },
+        {
+          "seconds": 5.583333333333333,
+          "voxel_count": 28664,
+          "point_count": 21377
+        },
+        {
+          "seconds": 5.666666666666667,
+          "voxel_count": 28514,
+          "point_count": 21269
+        },
+        {
+          "seconds": 5.75,
+          "voxel_count": 28682,
+          "point_count": 21119
+        },
+        {
+          "seconds": 5.833333333333333,
+          "voxel_count": 27948,
+          "point_count": 21029
+        },
+        {
+          "seconds": 5.916666666666667,
+          "voxel_count": 27887,
+          "point_count": 21285
+        },
+        {
+          "seconds": 6.0,
+          "voxel_count": 27709,
+          "point_count": 21320
+        },
+        {
+          "seconds": 6.083333333333333,
+          "voxel_count": 26931,
+          "point_count": 20803
+        },
+        {
+          "seconds": 6.166666666666667,
+          "voxel_count": 26947,
+          "point_count": 20729
+        },
+        {
+          "seconds": 6.25,
+          "voxel_count": 25807,
+          "point_count": 20728
+        },
+        {
+          "seconds": 6.333333333333333,
+          "voxel_count": 25593,
+          "point_count": 20438
+        },
+        {
+          "seconds": 6.416666666666667,
+          "voxel_count": 25144,
+          "point_count": 20771
+        },
+        {
+          "seconds": 6.5,
+          "voxel_count": 24874,
+          "point_count": 20732
+        },
+        {
+          "seconds": 6.583333333333333,
+          "voxel_count": 24624,
+          "point_count": 20433
+        },
+        {
+          "seconds": 6.666666666666667,
+          "voxel_count": 24740,
+          "point_count": 20461
+        }
+      ],
+      "streams": [
+        {
+          "id": "rgb-CAM_FRONT_LEFT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT_LEFT",
+          "label": "Front left",
+          "urls": [
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_00.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_01.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_02.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_03.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_04.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_05.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_06.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_07.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_FRONT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT",
+          "label": "Front",
+          "urls": [
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_00.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_01.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_02.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_03.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_04.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_05.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_06.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_07.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_FRONT_RIGHT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT_RIGHT",
+          "label": "Front right",
+          "urls": [
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_00.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_01.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_02.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_03.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_04.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_05.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_06.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_07.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_FRONT_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK_LEFT",
+          "kind": "rgb",
+          "camera": "CAM_BACK_LEFT",
+          "label": "Back left",
+          "urls": [
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_00.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_01.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_02.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_03.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_04.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_05.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_06.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_07.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK",
+          "kind": "rgb",
+          "camera": "CAM_BACK",
+          "label": "Back",
+          "urls": [
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_00.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_01.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_02.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_03.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_04.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_05.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_06.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_07.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK_RIGHT",
+          "kind": "rgb",
+          "camera": "CAM_BACK_RIGHT",
+          "label": "Back right",
+          "urls": [
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_00.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_01.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_02.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_03.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_04.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_05.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_06.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_07.webp",
+            "assets/fullmodal/scene-0013/rgb-CAM_BACK_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT_LEFT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT_LEFT",
+          "label": "Front left",
+          "urls": [
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_00.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_01.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_02.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_03.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_04.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_05.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_06.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_07.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT",
+          "label": "Front",
+          "urls": [
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_00.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_01.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_02.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_03.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_04.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_05.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_06.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_07.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT_RIGHT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT_RIGHT",
+          "label": "Front right",
+          "urls": [
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_00.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_01.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_02.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_03.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_04.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_05.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_06.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_07.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_FRONT_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK_LEFT",
+          "kind": "semantic",
+          "camera": "CAM_BACK_LEFT",
+          "label": "Back left",
+          "urls": [
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_00.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_01.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_02.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_03.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_04.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_05.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_06.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_07.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK",
+          "kind": "semantic",
+          "camera": "CAM_BACK",
+          "label": "Back",
+          "urls": [
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_00.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_01.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_02.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_03.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_04.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_05.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_06.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_07.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK_RIGHT",
+          "kind": "semantic",
+          "camera": "CAM_BACK_RIGHT",
+          "label": "Back right",
+          "urls": [
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_00.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_01.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_02.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_03.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_04.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_05.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_06.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_07.webp",
+            "assets/fullmodal/scene-0013/semantic-CAM_BACK_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "occ",
+          "kind": "occ",
+          "label": "Occupancy",
+          "urls": [
+            "assets/fullmodal/scene-0013/occ_00.webp",
+            "assets/fullmodal/scene-0013/occ_01.webp",
+            "assets/fullmodal/scene-0013/occ_02.webp",
+            "assets/fullmodal/scene-0013/occ_03.webp",
+            "assets/fullmodal/scene-0013/occ_04.webp",
+            "assets/fullmodal/scene-0013/occ_05.webp",
+            "assets/fullmodal/scene-0013/occ_06.webp",
+            "assets/fullmodal/scene-0013/occ_07.webp",
+            "assets/fullmodal/scene-0013/occ_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 576,
+            "tile_height": 408
+          }
+        },
+        {
+          "id": "lidar",
+          "kind": "lidar",
+          "label": "LiDAR",
+          "urls": [
+            "assets/fullmodal/scene-0013/lidar_00.webp",
+            "assets/fullmodal/scene-0013/lidar_01.webp",
+            "assets/fullmodal/scene-0013/lidar_02.webp",
+            "assets/fullmodal/scene-0013/lidar_03.webp",
+            "assets/fullmodal/scene-0013/lidar_04.webp",
+            "assets/fullmodal/scene-0013/lidar_05.webp",
+            "assets/fullmodal/scene-0013/lidar_06.webp",
+            "assets/fullmodal/scene-0013/lidar_07.webp",
+            "assets/fullmodal/scene-0013/lidar_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 576,
+            "tile_height": 408
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-0095",
+      "title": "Traffic at an intersection",
+      "current_token": "78be3bd5f1f146cdb1b7120bbf8a218c",
+      "preview": "assets/fullmodal/scene-0095/preview.jpg",
+      "frame_timestamps_us": [
+        1533151249647949,
+        1533151249731282,
+        1533151249814616,
+        1533151249897949,
+        1533151249981282,
+        1533151250064616,
+        1533151250147949,
+        1533151250231282,
+        1533151250314616,
+        1533151250397949,
+        1533151250481282,
+        1533151250564616,
+        1533151250647949,
+        1533151250731282,
+        1533151250814616,
+        1533151250897949,
+        1533151250981282,
+        1533151251064616,
+        1533151251147949,
+        1533151251231282,
+        1533151251314616,
+        1533151251397949,
+        1533151251481282,
+        1533151251564616,
+        1533151251647949,
+        1533151251731282,
+        1533151251814616,
+        1533151251897949,
+        1533151251981282,
+        1533151252064616,
+        1533151252147949,
+        1533151252231282,
+        1533151252314616,
+        1533151252397949,
+        1533151252481282,
+        1533151252564616,
+        1533151252647949,
+        1533151252731282,
+        1533151252814616,
+        1533151252897949,
+        1533151252981282,
+        1533151253064616,
+        1533151253147949,
+        1533151253231282,
+        1533151253314616,
+        1533151253397949,
+        1533151253481282,
+        1533151253564616,
+        1533151253647949,
+        1533151253731282,
+        1533151253814616,
+        1533151253897949,
+        1533151253981282,
+        1533151254064616,
+        1533151254147949,
+        1533151254231282,
+        1533151254314616,
+        1533151254397949,
+        1533151254481282,
+        1533151254564616,
+        1533151254647949,
+        1533151254731282,
+        1533151254814616,
+        1533151254897949,
+        1533151254981282,
+        1533151255064616,
+        1533151255147949,
+        1533151255231282,
+        1533151255314616,
+        1533151255397949,
+        1533151255481282,
+        1533151255564616,
+        1533151255647949,
+        1533151255731282,
+        1533151255814616,
+        1533151255897949,
+        1533151255981282,
+        1533151256064616,
+        1533151256147949,
+        1533151256231282,
+        1533151256314616
+      ],
+      "frames": [
+        {
+          "seconds": 0.0,
+          "voxel_count": 12819,
+          "point_count": 23413
+        },
+        {
+          "seconds": 0.08333333333333333,
+          "voxel_count": 12854,
+          "point_count": 23198
+        },
+        {
+          "seconds": 0.16666666666666666,
+          "voxel_count": 12835,
+          "point_count": 22808
+        },
+        {
+          "seconds": 0.25,
+          "voxel_count": 12837,
+          "point_count": 22968
+        },
+        {
+          "seconds": 0.3333333333333333,
+          "voxel_count": 12867,
+          "point_count": 22577
+        },
+        {
+          "seconds": 0.4166666666666667,
+          "voxel_count": 13103,
+          "point_count": 21995
+        },
+        {
+          "seconds": 0.5,
+          "voxel_count": 12916,
+          "point_count": 22311
+        },
+        {
+          "seconds": 0.5833333333333334,
+          "voxel_count": 13111,
+          "point_count": 21910
+        },
+        {
+          "seconds": 0.6666666666666666,
+          "voxel_count": 13016,
+          "point_count": 21727
+        },
+        {
+          "seconds": 0.75,
+          "voxel_count": 13058,
+          "point_count": 21747
+        },
+        {
+          "seconds": 0.8333333333333334,
+          "voxel_count": 13059,
+          "point_count": 21787
+        },
+        {
+          "seconds": 0.9166666666666666,
+          "voxel_count": 13162,
+          "point_count": 21790
+        },
+        {
+          "seconds": 1.0,
+          "voxel_count": 13201,
+          "point_count": 21781
+        },
+        {
+          "seconds": 1.0833333333333333,
+          "voxel_count": 13078,
+          "point_count": 21634
+        },
+        {
+          "seconds": 1.1666666666666667,
+          "voxel_count": 13076,
+          "point_count": 21567
+        },
+        {
+          "seconds": 1.25,
+          "voxel_count": 13019,
+          "point_count": 21818
+        },
+        {
+          "seconds": 1.3333333333333333,
+          "voxel_count": 13114,
+          "point_count": 21726
+        },
+        {
+          "seconds": 1.4166666666666667,
+          "voxel_count": 13041,
+          "point_count": 21696
+        },
+        {
+          "seconds": 1.5,
+          "voxel_count": 12996,
+          "point_count": 21902
+        },
+        {
+          "seconds": 1.5833333333333333,
+          "voxel_count": 12862,
+          "point_count": 21790
+        },
+        {
+          "seconds": 1.6666666666666667,
+          "voxel_count": 13001,
+          "point_count": 21841
+        },
+        {
+          "seconds": 1.75,
+          "voxel_count": 13101,
+          "point_count": 21706
+        },
+        {
+          "seconds": 1.8333333333333333,
+          "voxel_count": 13128,
+          "point_count": 21704
+        },
+        {
+          "seconds": 1.9166666666666667,
+          "voxel_count": 13554,
+          "point_count": 21924
+        },
+        {
+          "seconds": 2.0,
+          "voxel_count": 13091,
+          "point_count": 22032
+        },
+        {
+          "seconds": 2.0833333333333335,
+          "voxel_count": 13179,
+          "point_count": 21963
+        },
+        {
+          "seconds": 2.1666666666666665,
+          "voxel_count": 13154,
+          "point_count": 22065
+        },
+        {
+          "seconds": 2.25,
+          "voxel_count": 13311,
+          "point_count": 22293
+        },
+        {
+          "seconds": 2.3333333333333335,
+          "voxel_count": 13338,
+          "point_count": 22138
+        },
+        {
+          "seconds": 2.4166666666666665,
+          "voxel_count": 13222,
+          "point_count": 22433
+        },
+        {
+          "seconds": 2.5,
+          "voxel_count": 13307,
+          "point_count": 22341
+        },
+        {
+          "seconds": 2.5833333333333335,
+          "voxel_count": 13666,
+          "point_count": 22438
+        },
+        {
+          "seconds": 2.6666666666666665,
+          "voxel_count": 13751,
+          "point_count": 22456
+        },
+        {
+          "seconds": 2.75,
+          "voxel_count": 13661,
+          "point_count": 22494
+        },
+        {
+          "seconds": 2.8333333333333335,
+          "voxel_count": 13826,
+          "point_count": 22508
+        },
+        {
+          "seconds": 2.9166666666666665,
+          "voxel_count": 13839,
+          "point_count": 22629
+        },
+        {
+          "seconds": 3.0,
+          "voxel_count": 13658,
+          "point_count": 22642
+        },
+        {
+          "seconds": 3.0833333333333335,
+          "voxel_count": 13620,
+          "point_count": 22770
+        },
+        {
+          "seconds": 3.1666666666666665,
+          "voxel_count": 13588,
+          "point_count": 22867
+        },
+        {
+          "seconds": 3.25,
+          "voxel_count": 13640,
+          "point_count": 22797
+        },
+        {
+          "seconds": 3.3333333333333335,
+          "voxel_count": 13562,
+          "point_count": 22919
+        },
+        {
+          "seconds": 3.4166666666666665,
+          "voxel_count": 13978,
+          "point_count": 22898
+        },
+        {
+          "seconds": 3.5,
+          "voxel_count": 13819,
+          "point_count": 22982
+        },
+        {
+          "seconds": 3.5833333333333335,
+          "voxel_count": 13775,
+          "point_count": 22986
+        },
+        {
+          "seconds": 3.6666666666666665,
+          "voxel_count": 13702,
+          "point_count": 23016
+        },
+        {
+          "seconds": 3.75,
+          "voxel_count": 13687,
+          "point_count": 23060
+        },
+        {
+          "seconds": 3.8333333333333335,
+          "voxel_count": 13641,
+          "point_count": 22994
+        },
+        {
+          "seconds": 3.9166666666666665,
+          "voxel_count": 13533,
+          "point_count": 23140
+        },
+        {
+          "seconds": 4.0,
+          "voxel_count": 13553,
+          "point_count": 23133
+        },
+        {
+          "seconds": 4.083333333333333,
+          "voxel_count": 13500,
+          "point_count": 23116
+        },
+        {
+          "seconds": 4.166666666666667,
+          "voxel_count": 13257,
+          "point_count": 23077
+        },
+        {
+          "seconds": 4.25,
+          "voxel_count": 13097,
+          "point_count": 23186
+        },
+        {
+          "seconds": 4.333333333333333,
+          "voxel_count": 13145,
+          "point_count": 23103
+        },
+        {
+          "seconds": 4.416666666666667,
+          "voxel_count": 13220,
+          "point_count": 23102
+        },
+        {
+          "seconds": 4.5,
+          "voxel_count": 13283,
+          "point_count": 23161
+        },
+        {
+          "seconds": 4.583333333333333,
+          "voxel_count": 13266,
+          "point_count": 23133
+        },
+        {
+          "seconds": 4.666666666666667,
+          "voxel_count": 13193,
+          "point_count": 23133
+        },
+        {
+          "seconds": 4.75,
+          "voxel_count": 13217,
+          "point_count": 23116
+        },
+        {
+          "seconds": 4.833333333333333,
+          "voxel_count": 13281,
+          "point_count": 23175
+        },
+        {
+          "seconds": 4.916666666666667,
+          "voxel_count": 13277,
+          "point_count": 23215
+        },
+        {
+          "seconds": 5.0,
+          "voxel_count": 13250,
+          "point_count": 23247
+        },
+        {
+          "seconds": 5.083333333333333,
+          "voxel_count": 13479,
+          "point_count": 23175
+        },
+        {
+          "seconds": 5.166666666666667,
+          "voxel_count": 13426,
+          "point_count": 23170
+        },
+        {
+          "seconds": 5.25,
+          "voxel_count": 13560,
+          "point_count": 23155
+        },
+        {
+          "seconds": 5.333333333333333,
+          "voxel_count": 13312,
+          "point_count": 23079
+        },
+        {
+          "seconds": 5.416666666666667,
+          "voxel_count": 13422,
+          "point_count": 23234
+        },
+        {
+          "seconds": 5.5,
+          "voxel_count": 13485,
+          "point_count": 23227
+        },
+        {
+          "seconds": 5.583333333333333,
+          "voxel_count": 13396,
+          "point_count": 23177
+        },
+        {
+          "seconds": 5.666666666666667,
+          "voxel_count": 13395,
+          "point_count": 23153
+        },
+        {
+          "seconds": 5.75,
+          "voxel_count": 13613,
+          "point_count": 23104
+        },
+        {
+          "seconds": 5.833333333333333,
+          "voxel_count": 13381,
+          "point_count": 23101
+        },
+        {
+          "seconds": 5.916666666666667,
+          "voxel_count": 13267,
+          "point_count": 23097
+        },
+        {
+          "seconds": 6.0,
+          "voxel_count": 13276,
+          "point_count": 23228
+        },
+        {
+          "seconds": 6.083333333333333,
+          "voxel_count": 13315,
+          "point_count": 23198
+        },
+        {
+          "seconds": 6.166666666666667,
+          "voxel_count": 13312,
+          "point_count": 23163
+        },
+        {
+          "seconds": 6.25,
+          "voxel_count": 13287,
+          "point_count": 23193
+        },
+        {
+          "seconds": 6.333333333333333,
+          "voxel_count": 13221,
+          "point_count": 23200
+        },
+        {
+          "seconds": 6.416666666666667,
+          "voxel_count": 13261,
+          "point_count": 23302
+        },
+        {
+          "seconds": 6.5,
+          "voxel_count": 13681,
+          "point_count": 23200
+        },
+        {
+          "seconds": 6.583333333333333,
+          "voxel_count": 13711,
+          "point_count": 23126
+        },
+        {
+          "seconds": 6.666666666666667,
+          "voxel_count": 13714,
+          "point_count": 23060
+        }
+      ],
+      "streams": [
+        {
+          "id": "rgb-CAM_FRONT_LEFT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT_LEFT",
+          "label": "Front left",
+          "urls": [
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_00.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_01.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_02.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_03.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_04.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_05.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_06.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_07.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_FRONT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT",
+          "label": "Front",
+          "urls": [
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_00.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_01.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_02.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_03.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_04.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_05.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_06.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_07.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_FRONT_RIGHT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT_RIGHT",
+          "label": "Front right",
+          "urls": [
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_00.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_01.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_02.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_03.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_04.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_05.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_06.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_07.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_FRONT_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK_LEFT",
+          "kind": "rgb",
+          "camera": "CAM_BACK_LEFT",
+          "label": "Back left",
+          "urls": [
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_00.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_01.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_02.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_03.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_04.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_05.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_06.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_07.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK",
+          "kind": "rgb",
+          "camera": "CAM_BACK",
+          "label": "Back",
+          "urls": [
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_00.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_01.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_02.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_03.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_04.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_05.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_06.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_07.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK_RIGHT",
+          "kind": "rgb",
+          "camera": "CAM_BACK_RIGHT",
+          "label": "Back right",
+          "urls": [
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_00.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_01.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_02.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_03.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_04.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_05.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_06.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_07.webp",
+            "assets/fullmodal/scene-0095/rgb-CAM_BACK_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT_LEFT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT_LEFT",
+          "label": "Front left",
+          "urls": [
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_00.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_01.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_02.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_03.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_04.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_05.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_06.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_07.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT",
+          "label": "Front",
+          "urls": [
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_00.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_01.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_02.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_03.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_04.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_05.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_06.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_07.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT_RIGHT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT_RIGHT",
+          "label": "Front right",
+          "urls": [
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_00.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_01.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_02.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_03.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_04.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_05.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_06.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_07.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_FRONT_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK_LEFT",
+          "kind": "semantic",
+          "camera": "CAM_BACK_LEFT",
+          "label": "Back left",
+          "urls": [
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_00.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_01.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_02.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_03.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_04.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_05.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_06.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_07.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK",
+          "kind": "semantic",
+          "camera": "CAM_BACK",
+          "label": "Back",
+          "urls": [
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_00.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_01.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_02.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_03.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_04.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_05.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_06.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_07.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK_RIGHT",
+          "kind": "semantic",
+          "camera": "CAM_BACK_RIGHT",
+          "label": "Back right",
+          "urls": [
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_00.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_01.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_02.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_03.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_04.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_05.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_06.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_07.webp",
+            "assets/fullmodal/scene-0095/semantic-CAM_BACK_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "occ",
+          "kind": "occ",
+          "label": "Occupancy",
+          "urls": [
+            "assets/fullmodal/scene-0095/occ_00.webp",
+            "assets/fullmodal/scene-0095/occ_01.webp",
+            "assets/fullmodal/scene-0095/occ_02.webp",
+            "assets/fullmodal/scene-0095/occ_03.webp",
+            "assets/fullmodal/scene-0095/occ_04.webp",
+            "assets/fullmodal/scene-0095/occ_05.webp",
+            "assets/fullmodal/scene-0095/occ_06.webp",
+            "assets/fullmodal/scene-0095/occ_07.webp",
+            "assets/fullmodal/scene-0095/occ_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 576,
+            "tile_height": 408
+          }
+        },
+        {
+          "id": "lidar",
+          "kind": "lidar",
+          "label": "LiDAR",
+          "urls": [
+            "assets/fullmodal/scene-0095/lidar_00.webp",
+            "assets/fullmodal/scene-0095/lidar_01.webp",
+            "assets/fullmodal/scene-0095/lidar_02.webp",
+            "assets/fullmodal/scene-0095/lidar_03.webp",
+            "assets/fullmodal/scene-0095/lidar_04.webp",
+            "assets/fullmodal/scene-0095/lidar_05.webp",
+            "assets/fullmodal/scene-0095/lidar_06.webp",
+            "assets/fullmodal/scene-0095/lidar_07.webp",
+            "assets/fullmodal/scene-0095/lidar_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 576,
+            "tile_height": 408
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-0103",
+      "title": "Pedestrians & cyclist",
+      "current_token": "3e8750f331d7499e9b5123e9eb70f2e2",
+      "preview": "assets/fullmodal/scene-0103/preview.jpg",
+      "frame_timestamps_us": [
+        1533151603547590,
+        1533151603630923,
+        1533151603714257,
+        1533151603797590,
+        1533151603880923,
+        1533151603964257,
+        1533151604047590,
+        1533151604130923,
+        1533151604214257,
+        1533151604297590,
+        1533151604380923,
+        1533151604464257,
+        1533151604547590,
+        1533151604630923,
+        1533151604714257,
+        1533151604797590,
+        1533151604880923,
+        1533151604964257,
+        1533151605047590,
+        1533151605130923,
+        1533151605214257,
+        1533151605297590,
+        1533151605380923,
+        1533151605464257,
+        1533151605547590,
+        1533151605630923,
+        1533151605714257,
+        1533151605797590,
+        1533151605880923,
+        1533151605964257,
+        1533151606047590,
+        1533151606130923,
+        1533151606214257,
+        1533151606297590,
+        1533151606380923,
+        1533151606464257,
+        1533151606547590,
+        1533151606630923,
+        1533151606714257,
+        1533151606797590,
+        1533151606880923,
+        1533151606964257,
+        1533151607047590,
+        1533151607130923,
+        1533151607214257,
+        1533151607297590,
+        1533151607380923,
+        1533151607464257,
+        1533151607547590,
+        1533151607630923,
+        1533151607714257,
+        1533151607797590,
+        1533151607880923,
+        1533151607964257,
+        1533151608047590,
+        1533151608130923,
+        1533151608214257,
+        1533151608297590,
+        1533151608380923,
+        1533151608464257,
+        1533151608547590,
+        1533151608630923,
+        1533151608714257,
+        1533151608797590,
+        1533151608880923,
+        1533151608964257,
+        1533151609047590,
+        1533151609130923,
+        1533151609214257,
+        1533151609297590,
+        1533151609380923,
+        1533151609464257,
+        1533151609547590,
+        1533151609630923,
+        1533151609714257,
+        1533151609797590,
+        1533151609880923,
+        1533151609964257,
+        1533151610047590,
+        1533151610130923,
+        1533151610214257
+      ],
+      "frames": [
+        {
+          "seconds": 0.0,
+          "voxel_count": 19844,
+          "point_count": 21444
+        },
+        {
+          "seconds": 0.08333333333333333,
+          "voxel_count": 20714,
+          "point_count": 21291
+        },
+        {
+          "seconds": 0.16666666666666666,
+          "voxel_count": 21020,
+          "point_count": 21201
+        },
+        {
+          "seconds": 0.25,
+          "voxel_count": 21094,
+          "point_count": 21252
+        },
+        {
+          "seconds": 0.3333333333333333,
+          "voxel_count": 21150,
+          "point_count": 21267
+        },
+        {
+          "seconds": 0.4166666666666667,
+          "voxel_count": 21926,
+          "point_count": 21470
+        },
+        {
+          "seconds": 0.5,
+          "voxel_count": 21799,
+          "point_count": 21572
+        },
+        {
+          "seconds": 0.5833333333333334,
+          "voxel_count": 22893,
+          "point_count": 21668
+        },
+        {
+          "seconds": 0.6666666666666666,
+          "voxel_count": 23064,
+          "point_count": 21680
+        },
+        {
+          "seconds": 0.75,
+          "voxel_count": 22918,
+          "point_count": 22065
+        },
+        {
+          "seconds": 0.8333333333333334,
+          "voxel_count": 22774,
+          "point_count": 22221
+        },
+        {
+          "seconds": 0.9166666666666666,
+          "voxel_count": 22847,
+          "point_count": 22253
+        },
+        {
+          "seconds": 1.0,
+          "voxel_count": 23014,
+          "point_count": 22396
+        },
+        {
+          "seconds": 1.0833333333333333,
+          "voxel_count": 23819,
+          "point_count": 22541
+        },
+        {
+          "seconds": 1.1666666666666667,
+          "voxel_count": 23094,
+          "point_count": 22145
+        },
+        {
+          "seconds": 1.25,
+          "voxel_count": 23346,
+          "point_count": 22538
+        },
+        {
+          "seconds": 1.3333333333333333,
+          "voxel_count": 23872,
+          "point_count": 22663
+        },
+        {
+          "seconds": 1.4166666666666667,
+          "voxel_count": 23931,
+          "point_count": 23064
+        },
+        {
+          "seconds": 1.5,
+          "voxel_count": 23640,
+          "point_count": 23109
+        },
+        {
+          "seconds": 1.5833333333333333,
+          "voxel_count": 23673,
+          "point_count": 23049
+        },
+        {
+          "seconds": 1.6666666666666667,
+          "voxel_count": 23834,
+          "point_count": 23177
+        },
+        {
+          "seconds": 1.75,
+          "voxel_count": 24123,
+          "point_count": 23252
+        },
+        {
+          "seconds": 1.8333333333333333,
+          "voxel_count": 24330,
+          "point_count": 23398
+        },
+        {
+          "seconds": 1.9166666666666667,
+          "voxel_count": 24243,
+          "point_count": 23446
+        },
+        {
+          "seconds": 2.0,
+          "voxel_count": 24298,
+          "point_count": 23412
+        },
+        {
+          "seconds": 2.0833333333333335,
+          "voxel_count": 23518,
+          "point_count": 23248
+        },
+        {
+          "seconds": 2.1666666666666665,
+          "voxel_count": 23473,
+          "point_count": 23195
+        },
+        {
+          "seconds": 2.25,
+          "voxel_count": 23450,
+          "point_count": 23596
+        },
+        {
+          "seconds": 2.3333333333333335,
+          "voxel_count": 23059,
+          "point_count": 23597
+        },
+        {
+          "seconds": 2.4166666666666665,
+          "voxel_count": 23949,
+          "point_count": 24123
+        },
+        {
+          "seconds": 2.5,
+          "voxel_count": 24073,
+          "point_count": 24267
+        },
+        {
+          "seconds": 2.5833333333333335,
+          "voxel_count": 24293,
+          "point_count": 24165
+        },
+        {
+          "seconds": 2.6666666666666665,
+          "voxel_count": 24732,
+          "point_count": 23878
+        },
+        {
+          "seconds": 2.75,
+          "voxel_count": 25290,
+          "point_count": 24298
+        },
+        {
+          "seconds": 2.8333333333333335,
+          "voxel_count": 25584,
+          "point_count": 24533
+        },
+        {
+          "seconds": 2.9166666666666665,
+          "voxel_count": 26065,
+          "point_count": 25087
+        },
+        {
+          "seconds": 3.0,
+          "voxel_count": 25895,
+          "point_count": 25176
+        },
+        {
+          "seconds": 3.0833333333333335,
+          "voxel_count": 25954,
+          "point_count": 24854
+        },
+        {
+          "seconds": 3.1666666666666665,
+          "voxel_count": 25673,
+          "point_count": 24664
+        },
+        {
+          "seconds": 3.25,
+          "voxel_count": 25862,
+          "point_count": 25172
+        },
+        {
+          "seconds": 3.3333333333333335,
+          "voxel_count": 25472,
+          "point_count": 24767
+        },
+        {
+          "seconds": 3.4166666666666665,
+          "voxel_count": 26008,
+          "point_count": 25347
+        },
+        {
+          "seconds": 3.5,
+          "voxel_count": 26357,
+          "point_count": 25379
+        },
+        {
+          "seconds": 3.5833333333333335,
+          "voxel_count": 26181,
+          "point_count": 25053
+        },
+        {
+          "seconds": 3.6666666666666665,
+          "voxel_count": 25838,
+          "point_count": 24465
+        },
+        {
+          "seconds": 3.75,
+          "voxel_count": 26260,
+          "point_count": 24535
+        },
+        {
+          "seconds": 3.8333333333333335,
+          "voxel_count": 26368,
+          "point_count": 24953
+        },
+        {
+          "seconds": 3.9166666666666665,
+          "voxel_count": 25257,
+          "point_count": 24504
+        },
+        {
+          "seconds": 4.0,
+          "voxel_count": 26145,
+          "point_count": 24581
+        },
+        {
+          "seconds": 4.083333333333333,
+          "voxel_count": 25730,
+          "point_count": 24510
+        },
+        {
+          "seconds": 4.166666666666667,
+          "voxel_count": 25835,
+          "point_count": 24812
+        },
+        {
+          "seconds": 4.25,
+          "voxel_count": 26379,
+          "point_count": 24498
+        },
+        {
+          "seconds": 4.333333333333333,
+          "voxel_count": 25915,
+          "point_count": 24382
+        },
+        {
+          "seconds": 4.416666666666667,
+          "voxel_count": 26624,
+          "point_count": 24602
+        },
+        {
+          "seconds": 4.5,
+          "voxel_count": 27247,
+          "point_count": 24950
+        },
+        {
+          "seconds": 4.583333333333333,
+          "voxel_count": 26389,
+          "point_count": 24394
+        },
+        {
+          "seconds": 4.666666666666667,
+          "voxel_count": 25612,
+          "point_count": 24265
+        },
+        {
+          "seconds": 4.75,
+          "voxel_count": 26401,
+          "point_count": 24727
+        },
+        {
+          "seconds": 4.833333333333333,
+          "voxel_count": 24765,
+          "point_count": 24387
+        },
+        {
+          "seconds": 4.916666666666667,
+          "voxel_count": 26041,
+          "point_count": 24858
+        },
+        {
+          "seconds": 5.0,
+          "voxel_count": 25570,
+          "point_count": 24872
+        },
+        {
+          "seconds": 5.083333333333333,
+          "voxel_count": 24557,
+          "point_count": 25129
+        },
+        {
+          "seconds": 5.166666666666667,
+          "voxel_count": 24439,
+          "point_count": 24728
+        },
+        {
+          "seconds": 5.25,
+          "voxel_count": 23612,
+          "point_count": 24470
+        },
+        {
+          "seconds": 5.333333333333333,
+          "voxel_count": 22980,
+          "point_count": 24592
+        },
+        {
+          "seconds": 5.416666666666667,
+          "voxel_count": 23836,
+          "point_count": 24884
+        },
+        {
+          "seconds": 5.5,
+          "voxel_count": 23004,
+          "point_count": 25034
+        },
+        {
+          "seconds": 5.583333333333333,
+          "voxel_count": 22739,
+          "point_count": 24579
+        },
+        {
+          "seconds": 5.666666666666667,
+          "voxel_count": 23402,
+          "point_count": 24918
+        },
+        {
+          "seconds": 5.75,
+          "voxel_count": 23191,
+          "point_count": 24679
+        },
+        {
+          "seconds": 5.833333333333333,
+          "voxel_count": 22713,
+          "point_count": 24423
+        },
+        {
+          "seconds": 5.916666666666667,
+          "voxel_count": 23034,
+          "point_count": 25149
+        },
+        {
+          "seconds": 6.0,
+          "voxel_count": 22741,
+          "point_count": 24889
+        },
+        {
+          "seconds": 6.083333333333333,
+          "voxel_count": 22732,
+          "point_count": 24450
+        },
+        {
+          "seconds": 6.166666666666667,
+          "voxel_count": 21788,
+          "point_count": 24404
+        },
+        {
+          "seconds": 6.25,
+          "voxel_count": 21982,
+          "point_count": 25043
+        },
+        {
+          "seconds": 6.333333333333333,
+          "voxel_count": 22159,
+          "point_count": 24976
+        },
+        {
+          "seconds": 6.416666666666667,
+          "voxel_count": 21522,
+          "point_count": 24700
+        },
+        {
+          "seconds": 6.5,
+          "voxel_count": 20784,
+          "point_count": 24266
+        },
+        {
+          "seconds": 6.583333333333333,
+          "voxel_count": 20615,
+          "point_count": 24260
+        },
+        {
+          "seconds": 6.666666666666667,
+          "voxel_count": 21060,
+          "point_count": 24369
+        }
+      ],
+      "streams": [
+        {
+          "id": "rgb-CAM_FRONT_LEFT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT_LEFT",
+          "label": "Front left",
+          "urls": [
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_00.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_01.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_02.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_03.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_04.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_05.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_06.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_07.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_FRONT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT",
+          "label": "Front",
+          "urls": [
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_00.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_01.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_02.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_03.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_04.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_05.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_06.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_07.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_FRONT_RIGHT",
+          "kind": "rgb",
+          "camera": "CAM_FRONT_RIGHT",
+          "label": "Front right",
+          "urls": [
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_00.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_01.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_02.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_03.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_04.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_05.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_06.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_07.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_FRONT_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK_LEFT",
+          "kind": "rgb",
+          "camera": "CAM_BACK_LEFT",
+          "label": "Back left",
+          "urls": [
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_00.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_01.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_02.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_03.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_04.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_05.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_06.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_07.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK",
+          "kind": "rgb",
+          "camera": "CAM_BACK",
+          "label": "Back",
+          "urls": [
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_00.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_01.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_02.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_03.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_04.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_05.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_06.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_07.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "rgb-CAM_BACK_RIGHT",
+          "kind": "rgb",
+          "camera": "CAM_BACK_RIGHT",
+          "label": "Back right",
+          "urls": [
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_00.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_01.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_02.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_03.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_04.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_05.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_06.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_07.webp",
+            "assets/fullmodal/scene-0103/rgb-CAM_BACK_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 480,
+            "tile_height": 270
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT_LEFT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT_LEFT",
+          "label": "Front left",
+          "urls": [
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_00.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_01.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_02.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_03.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_04.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_05.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_06.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_07.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT",
+          "label": "Front",
+          "urls": [
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_00.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_01.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_02.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_03.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_04.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_05.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_06.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_07.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_FRONT_RIGHT",
+          "kind": "semantic",
+          "camera": "CAM_FRONT_RIGHT",
+          "label": "Front right",
+          "urls": [
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_00.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_01.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_02.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_03.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_04.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_05.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_06.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_07.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_FRONT_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK_LEFT",
+          "kind": "semantic",
+          "camera": "CAM_BACK_LEFT",
+          "label": "Back left",
+          "urls": [
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_00.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_01.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_02.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_03.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_04.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_05.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_06.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_07.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_LEFT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK",
+          "kind": "semantic",
+          "camera": "CAM_BACK",
+          "label": "Back",
+          "urls": [
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_00.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_01.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_02.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_03.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_04.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_05.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_06.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_07.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "semantic-CAM_BACK_RIGHT",
+          "kind": "semantic",
+          "camera": "CAM_BACK_RIGHT",
+          "label": "Back right",
+          "urls": [
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_00.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_01.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_02.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_03.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_04.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_05.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_06.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_07.webp",
+            "assets/fullmodal/scene-0103/semantic-CAM_BACK_RIGHT_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 320,
+            "tile_height": 180
+          }
+        },
+        {
+          "id": "occ",
+          "kind": "occ",
+          "label": "Occupancy",
+          "urls": [
+            "assets/fullmodal/scene-0103/occ_00.webp",
+            "assets/fullmodal/scene-0103/occ_01.webp",
+            "assets/fullmodal/scene-0103/occ_02.webp",
+            "assets/fullmodal/scene-0103/occ_03.webp",
+            "assets/fullmodal/scene-0103/occ_04.webp",
+            "assets/fullmodal/scene-0103/occ_05.webp",
+            "assets/fullmodal/scene-0103/occ_06.webp",
+            "assets/fullmodal/scene-0103/occ_07.webp",
+            "assets/fullmodal/scene-0103/occ_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 576,
+            "tile_height": 408
+          }
+        },
+        {
+          "id": "lidar",
+          "kind": "lidar",
+          "label": "LiDAR",
+          "urls": [
+            "assets/fullmodal/scene-0103/lidar_00.webp",
+            "assets/fullmodal/scene-0103/lidar_01.webp",
+            "assets/fullmodal/scene-0103/lidar_02.webp",
+            "assets/fullmodal/scene-0103/lidar_03.webp",
+            "assets/fullmodal/scene-0103/lidar_04.webp",
+            "assets/fullmodal/scene-0103/lidar_05.webp",
+            "assets/fullmodal/scene-0103/lidar_06.webp",
+            "assets/fullmodal/scene-0103/lidar_07.webp",
+            "assets/fullmodal/scene-0103/lidar_08.webp"
+          ],
+          "atlas": {
+            "columns": 3,
+            "rows": 3,
+            "frames_per_atlas": 9,
+            "tile_width": 576,
+            "tile_height": 408
+          }
+        }
+      ]
+    }
+  ]
+}

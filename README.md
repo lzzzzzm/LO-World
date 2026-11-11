@@ -178,6 +178,7 @@ data/waymo/
 
 ## Project guides
 
+- [Project website](docs/github_pages.md): local preview and GitHub Pages hosting for the interactive LiDAR comparison.
 - [Installation](#installation)
 - [Data preparation](docs/data_preparation.md): pretrained downloads, nuScenes, BEVLayout, and Waymo inputs.
 - [Inference and evaluation](docs/inference_evaluation.md): World Model prediction, GenieDrive video generation, and metrics.

@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LO-World: Unified BEV Latent Modeling for Joint 4D Occupancy and LiDAR Forecasting. Explore LiDAR and occupancy forecasts alongside OpenDWM, I²-World, and ground truth.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="LO-World: Joint 4D Occupancy and LiDAR Forecasting">
+  <meta property="og:description" content="A shared BEV latent space for the future driving world. Interactive LiDAR and semantic occupancy comparisons.">
+  <title>LO-World | Joint 4D Occupancy and LiDAR Forecasting</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/performance.css">
+  <script src="assets/site.js" defer></script>
+  <script src="assets/architecture.js" defer></script>
+  <script src="assets/paper-results.js" defer></script>
+  <script src="assets/performance.js" defer></script>
+  <script src="assets/atlas-player.js" defer></script>
+  <script src="assets/control.js?v=12hz81-joint-v2" defer></script>
+  <script src="assets/fullmodal.js" defer></script>
+</head>
+<body>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-paper" viewBox="0 0 24 24"><path d="M14 3H6v18h12V7l-4-4ZM14 3v5h4M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 3 9 5v9l-9 5-9-5V8l9-5Zm0 10v9M3 8l9 5 9-5M7 5.8l10 5.4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+  </defs></svg>
+
+  <a class="skip-link" href="#forecasting">Skip to interactive comparison</a>
+  <header class="site-nav">
+    <div class="nav-inner"><a class="brand" href="#top" aria-label="LO-World home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>LO-World</a>
+      <nav aria-label="Page navigation"><a class="nav-link active" href="#forecasting" aria-label="LiDAR forecasting">LiDAR</a><a id="occ-nav" class="nav-link" href="#occ-forecasting" aria-label="Occupancy forecasting" hidden>Occupancy</a><a id="control-nav" class="nav-link" href="#trajectory-control" hidden>Control</a><a id="full-nav" class="nav-link" href="#fullmodal-generation" aria-label="All modalities" hidden>All modes</a><a class="nav-link" href="#measurements">Results</a><a class="nav-link" href="#citation">Citation</a></nav>
+      <a class="nav-source" href="https://github.com/lzzzzzm/LO-World">GitHub <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container" aria-labelledby="paper-title">
+      <div class="project-kicker"><span class="kicker-dot"></span>Driving world models<span class="kicker-divider">/</span>Research project</div>
+      <h1 id="paper-title"><span class="project-name">LO-World</span><span class="paper-title">Unified BEV Latent Modeling for<br class="desktop-break"> Joint 4D Occupancy and LiDAR Forecasting</span></h1>
+      <p class="authors"><span>Zhimin Liao</span><span>Ping Wei</span><span>Kai Mao</span><span>Shuaijia Chen</span></p>
+      <div class="resource-links">
+        <a class="resource primary" href="https://arxiv.org/abs/2611.11912"><svg class="icon"><use href="#i-paper"/></svg>Paper<svg class="icon arrow"><use href="#i-arrow"/></svg></a>
+        <a class="resource" href="https://github.com/lzzzzzm/LO-World"><svg class="icon"><use href="#i-code"/></svg>Code</a>
+        <a class="resource" href="https://huggingface.co/JimmyLiaoo/LO-World"><svg class="icon"><use href="#i-cube"/></svg>Models</a>
+      </div>
+      <p class="hero-summary">Joint occupancy and LiDAR forecasting in a <strong>shared bird’s-eye-view latent space.</strong></p>
+    </section>
+
+    <section id="introduction" class="overview-section container section-anchor" aria-labelledby="overview-title">
+      <div class="section-intro compact"><span class="section-overline">About the paper</span><h2 id="overview-title">Two modalities. One world model.</h2><p>LO-World forecasts semantic occupancy and LiDAR together through a shared BEV latent. A hybrid range–voxel autoencoder combines dense semantics with precise geometry, while a flow-matching generator reuses historical context to predict future scenes efficiently. Ego trajectories and optional layouts control the rollout.</p></div>
+      <figure class="architecture-figure">
+        <button id="architecture-expand" class="architecture-button" type="button" aria-label="Enlarge LO-World architecture overview" aria-haspopup="dialog" aria-controls="lightbox">
+          <span class="architecture-topline"><span>Architecture overview</span><span class="architecture-enlarge">Enlarge <svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span></span>
+          <picture>
+            <source media="(max-width:760px)" srcset="assets/architecture-mobile.svg">
+            <img id="architecture-thumbnail" src="assets/architecture.svg" width="1280" height="460" alt="LO-World architecture: LO-VAE jointly encodes occupancy and LiDAR into shared BEV latents; LO-Former caches history and generates future latents with trajectory and optional layout conditions; a shared decoder predicts both modalities.">
+          </picture>
+        </button>
+      </figure>
+      <div id="paper-highlights" class="paper-highlights" role="group" aria-label="Explore the paper highlights" aria-busy="true">
+        <a class="paper-highlight" href="#occ-forecasting">
+          <span class="paper-highlight-label">Richer semantics</span>
+          <strong class="paper-highlight-number"><span data-paper-highlight="miou">—</span><small>pp mIoU ↑</small></strong>
+          <span class="paper-highlight-detail">vs GenieDrive · LO-World-T</span>
+          <span class="paper-highlight-cta">Explore occupancy <span aria-hidden="true">↓</span></span>
+        </a>
+        <a class="paper-highlight" href="#forecasting">
+          <span class="paper-highlight-label">Sharper geometry</span>
+          <strong class="paper-highlight-number"><span data-paper-highlight="cd">—</span><small>% CD ↓</small></strong>
+          <span class="paper-highlight-detail">vs LaGen · LO-World-TBM</span>
+          <span class="paper-highlight-cta">Compare LiDAR <span aria-hidden="true">↓</span></span>
+        </a>
+        <a class="paper-highlight" href="#measurements">
+          <span class="paper-highlight-label">Real-time forecasting</span>
+          <strong class="paper-highlight-number"><span data-paper-highlight="fps">—</span><small>FPS-E2E</small></strong>
+          <span class="paper-highlight-detail">RTX 4090 · includes decoding</span>
+          <span class="paper-highlight-cta">See the results <span aria-hidden="true">↓</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="forecasting" class="showcase section-anchor" aria-labelledby="forecast-title">
+      <div class="container">
+        <div class="section-intro"><span class="section-overline">See the future, frame by frame</span><h2 id="forecast-title">LiDAR forecasting<span class="heading-dot">.</span></h2><p>Compare layout-conditioned LO-World and OpenDWM against the same future LiDAR observations.</p></div>
+        <div class="comparison-shell">
+          <div class="comparison-topline"><div class="scene-meta"><span class="live-dot" aria-hidden="true"></span><span class="dataset-name">nuScenes</span><span class="meta-divider">/</span><strong id="scene-label">Scene 0103</strong><span id="scene-position" class="scene-position" hidden></span></div><div class="forecast-meta"><span>2 Hz</span><span class="meta-dot">·</span><span>6-second horizon</span></div></div>
+          <div id="scene-picker" class="scene-picker" role="group" aria-label="Choose a LiDAR forecasting scene" hidden></div>
+          <div class="viewer-heading"><div><h3>Layout-conditioned prediction</h3><p>Same timestamps · Same viewpoint · Same height scale</p></div><div class="view-switch" role="group" aria-label="Comparison view"><button type="button" id="timeline-view" aria-pressed="true">Side by side</button><button type="button" id="wipe-view" aria-pressed="false">Drag to compare</button><button type="button" id="overview-view" aria-pressed="false">Time grid</button></div></div>
+          <p id="load-status" class="load-status" role="status">Loading the point clouds…</p>
+          <div id="comparison" hidden>
+            <div id="timeline-panel"><div class="panels" id="panels"></div></div>
+            <div id="wipe-panel" class="wipe-layout" hidden><article class="cloud-card"><div class="cloud-heading"><div><span class="method-dot gt-dot"></span><h4>Ground truth</h4></div><span>Reference</span></div><div id="wipe-gt"></div><p class="wipe-reference-caption">Observed LiDAR at the selected future timestamp</p></article><article class="cloud-card wipe-card"><div class="cloud-heading"><div><span class="method-dot ours-dot"></span><h4>Model comparison</h4></div><span>Drag the divider</span></div><div class="wipe-stage" id="wipe-stage"><img id="wipe-after" src="assets/lidar/scene-0103/loworld_04.png" alt="LO-World layout-conditioned LiDAR prediction" width="960" height="680"><img id="wipe-before" class="wipe-before" src="assets/lidar/scene-0103/opendwm_04.png" alt="OpenDWM LiDAR prediction" width="960" height="680"><div class="wipe-line" aria-hidden="true"><span>‹ ›</span></div><span class="wipe-tag before-tag">OpenDWM</span><span class="wipe-tag after-tag">LO-World</span><input id="wipe-range" class="wipe-input" type="range" min="0" max="100" value="50" aria-label="Reveal OpenDWM on the left and LO-World on the right"></div><p class="wipe-reference-caption">Drag horizontally or use the arrow keys to reveal either model</p></article></div>
+            <div id="overview-panel" class="overview" hidden></div>
+            <div id="playback-controls"><div class="playback"><button id="play" class="play-button" type="button" aria-label="Play all forecasts"><svg class="icon"><use href="#i-play"/></svg><span>Play</span></button><div class="timeline"><div class="time-caption"><label for="time">Future timestep</label><output id="time-label" for="time">+2.0 s</output></div><input id="time" type="range" min="0" max="11" value="3" step="1"><div class="time-ticks"><span>+0.5 s</span><span>+3.0 s</span><span>+6.0 s</span></div></div><label class="loop-control"><input id="loop" type="checkbox" checked><span>Loop</span></label></div><div class="horizon-row"><span>Jump to a horizon</span><div class="horizon-buttons" role="group" aria-label="Forecast horizon"><button type="button" data-seconds="2" aria-pressed="true">2 seconds</button><button type="button" data-seconds="4" aria-pressed="false">4 seconds</button><button type="button" data-seconds="6" aria-pressed="false">6 seconds</button></div></div></div>
+            <div class="viewer-caption"><span class="height-legend"><span>Height</span><i aria-hidden="true"></i><span>−1 m</span><span>+5.4 m</span></span><span id="viewer-help">Click any point cloud to enlarge <svg class="icon"><use href="#i-expand"/></svg></span></div>
+          </div>
+          <noscript><p>Enable JavaScript to explore the forecasts. <a href="assets/lidar/scene-0103/loworld_04.png">View the LO-World prediction at two seconds.</a></p></noscript>
+        </div>
+        <p class="figure-caption"><strong>Layout-conditioned LiDAR forecasting.</strong> Both models predict the same twelve future timestamps. Colors encode point height; all views use the same camera and spatial extent.</p>
+        <details class="protocol-details scene-details"><summary><span>Scene measurements &amp; setup</span><span class="details-plus" aria-hidden="true">+</span></summary>
+    <section id="lidar-scene-measurements" class="measurements scene-measurements section-anchor" aria-labelledby="metrics-title" hidden>
+      <div class="section-intro compact"><span class="section-overline">A closer look</span><h2 id="metrics-title">How the forecast evolves.</h2><p>Chamfer distance across the future horizon for this example.<br>Both predictions are measured against the same raw LiDAR observations.</p></div>
+      <div class="metrics-layout"><div class="chart-container"><div class="chart-heading"><strong>Scene Chamfer distance</strong><span>m² · Lower is better</span></div><div id="chart" class="chart"></div></div><div class="results-table-wrap"><table class="metrics-table"><caption><span id="metrics-scene-label" class="table-kicker">nuScenes · scene-0103</span>Distance to the observed future</caption><thead><tr><th scope="col">Horizon</th><th scope="col">OpenDWM</th><th scope="col">LO-World<small>Layout-conditioned</small></th></tr></thead><tbody id="metrics-body"></tbody></table><p class="table-note">Future mean: all 12 future frames, excluding the current reconstruction.</p></div></div>
+      <p class="measurement-note"><span class="note-marker" aria-hidden="true">i</span>Each plot shows the selected scene with one seed. These are illustrative scene measurements, not validation-set benchmark scores.</p>
+      <details id="protocol" class="protocol-details"><summary><span>Comparison setup &amp; evaluation details</span><span class="details-plus" aria-hidden="true">+</span></summary><div class="protocol-content"><p>The methods use their own condition encodings and different history lengths. OpenDWM is rolled out autoregressively to six seconds.</p><div class="table-scroll"><table class="protocol-table"><thead><tr><th scope="col">Setting</th><th scope="col">LO-World</th><th scope="col">OpenDWM</th></tr></thead><tbody><tr><th scope="row">Model</th><td>BEVLayout-conditioned, 12-frame autoregressive</td><td>Temporal MaskGIT, layout-conditioned</td></tr><tr><th scope="row">History</th><td>Current joint OCC/LiDAR latent + four memory frames</td><td>Three reference LiDAR frames, including current</td></tr><tr><th scope="row">Future conditions</th><td>BEV layouts and ego poses</td><td>3D boxes, HD map and ego poses</td></tr><tr><th scope="row">Forecast</th><td colspan="2">12 future frames at 2 Hz; +0.5 to +6 seconds; seed 0</td></tr><tr><th scope="row">Crop</th><td colspan="2">Ego coordinates: x, y ∈ [−40, 40) m; z ∈ [−1, 5.4) m</td></tr><tr><th scope="row">Scene metric</th><td colspan="2">Sum of the two directional mean squared nearest-neighbor distances (m²), using every point in the shared crop</td></tr><tr><th scope="row">Reference</th><td colspan="2">Raw nuScenes validation LiDAR at matching timestamps. Horizon labels are nominal 2 Hz positions; measured times are in the scene data.</td></tr></tbody></table></div><div class="source-links"><a href="https://github.com/lzzzzzm/LO-World/blob/main/configs/world_model/bev_world_12f_layout_autoregressive.py">LO-World config ↗</a><a href="https://github.com/SenseTime-FVG/OpenDWM">OpenDWM source ↗</a><a href="assets/comparison.json">Scene data &amp; measurements ↗</a></div></div></details>
+    </section>
+        </details>
+      </div>
+    </section>
+
+    <section id="occ-forecasting" class="showcase section-anchor" aria-labelledby="occ-forecast-title" hidden>
+      <div class="container">
+        <div class="section-intro"><span class="section-overline">See the future, frame by frame</span><h2 id="occ-forecast-title">Occupancy forecasting<span class="heading-dot">.</span></h2><p>Compare LO-World and I²-World against the same future semantic occupancy. Five scenes, one shared voxel grid.</p></div>
+        <div class="comparison-shell">
+          <div class="comparison-topline"><div class="scene-meta"><span class="live-dot" aria-hidden="true"></span><span class="dataset-name">nuScenes</span><span class="meta-divider">/</span><strong id="occ-scene-label">Scene 0270</strong><span id="occ-scene-position" class="scene-position" hidden></span></div><div class="forecast-meta"><span>2 Hz</span><span class="meta-dot">·</span><span>6-second horizon</span></div></div>
+          <div id="occ-scene-picker" class="scene-picker" role="group" aria-label="Choose a Occupancy forecasting scene" hidden></div>
+          <div class="viewer-heading"><div><h3>Trajectory-conditioned prediction</h3><p>Same timestamps · Same voxel grid · Same semantic colors</p></div><div class="view-switch" role="group" aria-label="Comparison view"><button type="button" id="occ-timeline-view" aria-pressed="true">Side by side</button><button type="button" id="occ-wipe-view" aria-pressed="false">Drag to compare</button><button type="button" id="occ-overview-view" aria-pressed="false">Time grid</button></div></div>
+          <p id="occ-load-status" class="load-status" role="status">Loading the occupancy forecasts…</p>
+          <div id="occ-comparison" hidden>
+            <div id="occ-timeline-panel"><div class="panels" id="occ-panels"></div></div>
+            <div id="occ-wipe-panel" class="wipe-layout" hidden><article class="cloud-card"><div class="cloud-heading"><div><span class="method-dot gt-dot"></span><h4>Ground truth</h4></div><span>Reference</span></div><div id="occ-wipe-gt"></div><p class="wipe-reference-caption">Occ3D ground truth at the selected future timestamp</p></article><article class="cloud-card wipe-card"><div class="cloud-heading"><div><span class="method-dot ours-dot"></span><h4>Model comparison</h4></div><span>Drag the divider</span></div><div class="wipe-stage" id="occ-wipe-stage"><img id="occ-wipe-after" src="assets/occupancy/scene-0270/loworld_no-layout_04.png" alt="LO-World occupancy prediction" width="960" height="680"><img id="occ-wipe-before" class="wipe-before" src="assets/occupancy/scene-0270/i2world_04.png" alt="I²-World occupancy prediction" width="960" height="680"><div class="wipe-line" aria-hidden="true"><span>‹ ›</span></div><span class="wipe-tag before-tag">I²-World</span><span class="wipe-tag after-tag">LO-World</span><input id="occ-wipe-range" class="wipe-input" type="range" min="0" max="100" value="50" aria-label="Reveal I²-World on the left and LO-World on the right"></div><p class="wipe-reference-caption">Drag horizontally or use the arrow keys to reveal either model</p></article></div>
+            <div id="occ-overview-panel" class="overview" hidden></div>
+            <div id="occ-playback-controls"><div class="playback"><button id="occ-play" class="play-button" type="button" aria-label="Play all forecasts"><svg class="icon"><use href="#i-play"/></svg><span>Play</span></button><div class="timeline"><div class="time-caption"><label for="occ-time">Future timestep</label><output id="occ-time-label" for="occ-time">+2.0 s</output></div><input id="occ-time" type="range" min="0" max="11" value="3" step="1"><div class="time-ticks"><span>+0.5 s</span><span>+3.0 s</span><span>+6.0 s</span></div></div><label class="loop-control"><input id="occ-loop" type="checkbox" checked><span>Loop</span></label></div><div class="horizon-row"><span>Jump to a horizon</span><div class="horizon-buttons" role="group" aria-label="Forecast horizon"><button type="button" data-seconds="2" aria-pressed="true">2 seconds</button><button type="button" data-seconds="4" aria-pressed="false">4 seconds</button><button type="button" data-seconds="6" aria-pressed="false">6 seconds</button></div></div></div>
+            <div class="viewer-caption"><span class="semantic-caption">Occ3D semantic classes · Free and ignored voxels are not drawn</span><span id="occ-viewer-help">Click any occupancy volume to enlarge <svg class="icon"><use href="#i-expand"/></svg></span></div>
+            <div id="occ-semantic-legend" class="semantic-legend" aria-label="Occupancy semantic color legend"></div>
+          </div>
+          <noscript><p>Enable JavaScript to explore the forecasts. <a href="assets/occupancy/scene-0270/loworld_no-layout_04.png">View the LO-World occupancy at two seconds.</a></p></noscript>
+        </div>
+        <details class="protocol-details scene-details"><summary><span>Scene measurements &amp; setup</span><span class="details-plus" aria-hidden="true">+</span></summary>
+    <section id="occ-measurements" class="measurements scene-measurements section-anchor" aria-labelledby="occ-metrics-title" hidden>
+      <div class="section-intro compact"><span class="section-overline">A closer look</span><h2 id="occ-metrics-title">Occupancy: semantics of the future.</h2><p>Semantic mIoU across the future horizon.<br>Both predictions are measured against the same Occ3D occupancy, with no visibility mask.</p></div>
+      <div class="metrics-layout"><div class="chart-container"><div class="chart-heading"><strong>Scene semantic mIoU</strong><span>% · Higher is better</span></div><div id="occ-chart" class="chart"></div></div><div class="results-table-wrap"><table class="metrics-table"><caption><span id="occ-metrics-scene-label" class="table-kicker">nuScenes · scene-0270</span>Semantic agreement with the future occupancy</caption><thead><tr><th scope="col">Horizon</th><th scope="col">I²-World</th><th scope="col">LO-World<small>Trajectory-conditioned</small></th></tr></thead><tbody id="occ-metrics-body"></tbody></table><p class="table-note">Future mean: all 12 future frames, excluding the current reconstruction.</p></div></div>
+      <p class="measurement-note"><span class="note-marker" aria-hidden="true">i</span>Each plot shows the selected scene with one seed. These are illustrative scene measurements, not validation-set benchmark scores.</p>
+      <details id="occ-protocol" class="protocol-details"><summary><span>Comparison setup &amp; evaluation details</span><span class="details-plus" aria-hidden="true">+</span></summary><div class="protocol-content"><p id="occ-condition-note">Neither model receives future scene layouts in this OCC comparison. Their history representations differ. I²-World uses its original three-second checkpoint with autoregressive rollout to six seconds.</p><div class="table-scroll"><table class="protocol-table"><thead><tr><th scope="col">Setting</th><th scope="col">LO-World</th><th scope="col">I²-World</th></tr></thead><tbody><tr><th scope="row">Model</th><td id="occ-model-variant">12-frame autoregressive, no layout</td><td>Original I²-Former + intra/inter tokenizer</td></tr><tr><th scope="row">History</th><td>Current joint occupancy/LiDAR latent + four memory frames</td><td>Occupancy history through the original four-frame tokenizer and five-frame world-model memory</td></tr><tr><th scope="row">Future conditions</th><td id="occ-loworld-conditions">Ego poses; no BEV layout</td><td>Ego-motion conditions; no scene layout</td></tr><tr><th scope="row">Forecast</th><td colspan="2">12 future frames at 2 Hz; +0.5 to +6 seconds; one run per scene</td></tr><tr><th scope="row">Voxel grid</th><td colspan="2">200 × 200 × 16, 0.4 m resolution; X/Y/Z axis order; x, y ∈ [−40, 40) m, z ∈ [−1, 5.4) m</td></tr><tr><th scope="row">Semantic rendering</th><td colspan="2">Shared Occ3D palette for classes 0–16; free class 17 and ignored label 255 are not drawn. Only exposed voxel surfaces are rendered.</td></tr><tr><th scope="row">Scene metric</th><td colspan="2">Semantic mIoU: unweighted mean of per-class intersection over union for occupied semantic classes 0–16. Free class 17 is excluded from the class mean; GT label 255 is ignored; no camera or LiDAR visibility mask. Classes absent from both prediction and GT (zero union) are omitted. A class with nonzero union and zero correct predictions contributes zero. Future mean averages the 12 future-frame mIoUs.</td></tr><tr><th scope="row">Reference</th><td colspan="2">Occ3D-nuScenes validation occupancy at matching tokens. Horizon labels are nominal 2 Hz positions; measured timestamps are in the scene data. Future ground-truth occupancy is not used as a forecasting input.</td></tr></tbody></table></div><div class="source-links"><a id="occ-config-link" href="https://github.com/lzzzzzm/LO-World/blob/main/configs/world_model/bev_world_12f_autoregressive.py">LO-World config ↗</a><a href="https://github.com/lzzzzzm/II-World">I²-World source ↗</a><a href="assets/occupancy.json">Scene data &amp; measurements ↗</a></div></div></details>
+    </section>
+        </details>
+      </div>
+    </section>
+
+    <section id="trajectory-control" class="showcase section-anchor" aria-labelledby="control-title" hidden>
+      <div class="container">
+        <div class="section-intro"><span class="section-overline">Choose a path through the world</span><h2 id="control-title">One scene. Three possible futures<span class="heading-dot">.</span></h2><p>Keep the observed history fixed. Follow three map-guided ego paths with matching layout conditions.</p></div>
+        <div class="comparison-shell">
+          <div class="comparison-topline"><div class="scene-meta"><span class="live-dot" aria-hidden="true"></span><span class="dataset-name">nuScenes</span><span class="meta-divider">/</span><strong id="control-scene-label">Shared starting scene</strong><span id="control-scene-position" class="scene-position"></span></div><div class="forecast-meta"><span>12 Hz</span><span class="meta-dot">·</span><span>81 frames</span></div></div>
+          <div id="control-scene-picker" class="scene-picker control-scenes" role="group" aria-label="Choose a shared starting scene"></div>
+          <p id="control-load-status" class="load-status" role="status">Loading the trajectory generations…</p>
+          <div id="control-content" hidden>
+            <div class="control-context"><div id="control-initial" class="control-initial control-initial-pair"></div><div class="control-context-copy"><h3>Same start. A different route.</h3><p>Each route shares the current reconstruction and four memory frames. Future ego poses and their corresponding BEV layouts guide the generation.</p><span class="control-fixed">Layout-conditioned · Same seed</span></div><div class="control-diagram"><p>Planned ego paths · Initial ego frame</p><div id="control-diagram"></div></div></div>
+            <div class="viewer-heading"><div><h3>Joint occupancy &amp; LiDAR generation</h3><p id="control-output-note">Occupancy above · LiDAR below · Shared camera and timestamp</p></div><div class="view-switch" role="group" aria-label="Generated representation"><button type="button" data-control-mode="joint" aria-pressed="true">Occupancy + LiDAR</button><button type="button" data-control-mode="layout" aria-pressed="false">Layout condition</button></div></div>
+            <div class="panels" id="control-panels"></div>
+            <div class="playback"><button id="control-play" class="play-button" type="button" aria-label="Play all trajectories"><svg class="icon"><use href="#i-play"/></svg><span>Play</span></button><div class="timeline"><div class="time-caption"><label for="control-time">Generation timestep</label><output id="control-time-label" for="control-time">+2.00 s</output></div><input id="control-time" type="range" min="0" max="80" value="24" step="1"><div class="time-ticks"><span>Shared start</span><span>+3.33 s</span><span>+6.67 s</span></div></div><label class="loop-control"><input id="control-loop" type="checkbox" checked><span>Loop</span></label></div>
+            <div class="horizon-row"><span>Jump to a moment</span><div class="horizon-buttons" role="group" aria-label="Generation time"><button type="button" data-control-seconds="0" aria-pressed="false">Shared start</button><button type="button" data-control-seconds="2" aria-pressed="true">2 seconds</button><button type="button" data-control-seconds="4" aria-pressed="false">4 seconds</button><button type="button" data-control-seconds="6" aria-pressed="false">6 seconds</button></div></div>
+            <div class="viewer-caption"><span id="control-buffer-status" role="status">81 frames · 12 Hz</span><span>Click any frame to enlarge <svg class="icon"><use href="#i-expand"/></svg></span></div>
+          </div>
+        </div>
+        <p class="figure-caption"><strong>Trajectory-controlled joint generation.</strong> The three branches share the same initial state, memory, checkpoint and random seed. The map and future actor world trajectories are held fixed; layouts are reprojected for each ego path. Alternative ego poses have no matched ground-truth future.</p>
+      </div>
+    </section>
+
+
+
+
+    <section id="fullmodal-generation" class="showcase section-anchor" aria-labelledby="full-title" hidden>
+      <div class="container">
+        <div class="section-intro"><span class="section-overline">Multimodal generation</span><h2 id="full-title">Geometry, semantics and appearance<span class="heading-dot">.</span></h2><p>Six camera views, semantic projections, occupancy and LiDAR, all synchronized.</p></div>
+        <div class="comparison-shell">
+          <div class="comparison-topline"><div class="scene-meta"><span class="live-dot" aria-hidden="true"></span><span class="dataset-name">nuScenes</span><span class="meta-divider">/</span><strong id="full-scene-label">Multimodal scene</strong><span id="full-scene-position" class="scene-position"></span></div><div class="forecast-meta"><span>12 Hz</span><span class="meta-dot">·</span><span>81 frames</span></div></div>
+          <div id="full-scene-picker" class="scene-picker control-scenes" role="group" aria-label="Choose a multimodal scene"></div>
+          <p id="full-load-status" class="load-status" role="status">Loading the multimodal generations…</p>
+          <div id="full-content" hidden>
+            <div class="viewer-heading"><div><h3>One timeline, every modality</h3><p>Occupancy-derived semantic views guide six-camera RGB generation.</p></div></div>
+            <div id="full-panels" class="full-layout">
+              <div class="full-appearance">
+                <section aria-labelledby="full-rgb-title"><div class="full-group-heading"><h3 id="full-rgb-title">Six-camera RGB</h3><span>Generated with GenieDrive</span></div><div id="full-cameras" class="full-camera-grid"></div></section>
+                <section aria-labelledby="full-semantic-title"><div class="full-group-heading"><h3 id="full-semantic-title">Semantic views</h3><span>Projected from predicted occupancy</span></div><div id="full-semantics" class="full-semantic-grid"></div></section>
+              </div>
+              <section aria-labelledby="full-geometry-title"><div class="full-group-heading"><h3 id="full-geometry-title">Joint 3D forecasts</h3><span>LO-World</span></div><div id="full-geometry" class="full-geometry"></div></section>
+            </div>
+            <div class="playback"><button id="full-play" class="play-button" type="button" aria-label="Play all modalities"><svg class="icon"><use href="#i-play"/></svg><span>Play</span></button><div class="timeline"><div class="time-caption"><label for="full-time">Scene time</label><output id="full-time-label" for="full-time">+2.00 s</output></div><input id="full-time" type="range" min="0" max="80" value="24" step="1"><div class="time-ticks"><span>Start</span><span>+3.33 s</span><span>+6.67 s</span></div></div><label class="loop-control"><input id="full-loop" type="checkbox" checked><span>Loop</span></label></div>
+            <div class="horizon-row"><span>Jump to a moment</span><div class="horizon-buttons" role="group" aria-label="Multimodal scene time"><button type="button" data-full-seconds="0" aria-pressed="false">Start</button><button type="button" data-full-seconds="2" aria-pressed="true">2 seconds</button><button type="button" data-full-seconds="4" aria-pressed="false">4 seconds</button><button type="button" data-full-seconds="6" aria-pressed="false">6 seconds</button></div></div>
+            <div class="viewer-caption"><span id="full-status" role="status">81 frames · 12 Hz</span><span>Click any view to enlarge <svg class="icon"><use href="#i-expand"/></svg></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="measurements" class="measurements container section-anchor" aria-labelledby="paper-results-title">
+      <div class="section-intro compact"><span class="section-overline">From the paper</span><h2 id="paper-results-title">Results<span class="heading-dot">.</span></h2><p>Published evaluations across forecasting, generalization and video generation.</p></div>
+      <div id="performance-overview" class="performance-overview" aria-label="Forecasting quality and speed overview">
+        <p id="performance-status" class="performance-status" role="status">Loading performance highlights…</p>
+        <div id="performance-cards" class="performance-cards"></div>
+        <p class="performance-caption">nuScenes · 1–3 s average · Model variants and inputs are shown for each comparison. <a href="assets/paper-results.json">Paper data ↗</a></p>
+      </div>
+      <div class="paper-tabs" role="tablist" aria-label="Paper result tables">
+<button id="result-tab-occupancy" type="button" role="tab" aria-controls="result-occupancy" aria-selected="true" tabindex="0">Occupancy</button>
+<button id="result-tab-lidar" type="button" role="tab" aria-controls="result-lidar" aria-selected="false" tabindex="-1">LiDAR</button>
+<button id="result-tab-long-horizon" type="button" role="tab" aria-controls="result-long-horizon" aria-selected="false" tabindex="-1">Long horizon</button>
+<button id="result-tab-waymo" type="button" role="tab" aria-controls="result-waymo" aria-selected="false" tabindex="-1">Waymo</button>
+<button id="result-tab-video" type="button" role="tab" aria-controls="result-video" aria-selected="false" tabindex="-1">Video</button>
+</div>
+<div id="result-occupancy" class="paper-result-panel" role="tabpanel" aria-labelledby="result-tab-occupancy" tabindex="0">
+<div class="paper-table-heading"><h3>Occ3D-nuScenes occupancy forecasting</h3><a href="https://arxiv.org/html/2611.11912v1#S3.T1">Table 1 in the paper ↗</a></div>
+<div class="table-scroll"><table class="paper-results-table"><thead>
+<tr>
+<th scope="col" colspan="1" rowspan="2">Method</th>
+<th scope="col" colspan="1" rowspan="2">Input/Condition</th>
+<th scope="colgroup" colspan="4" rowspan="1">mIoU (%) ↑</th>
+<th scope="colgroup" colspan="4" rowspan="1">IoU (%) ↑</th>
+<th scope="col" colspan="1" rowspan="2">FPS ↑</th>
+</tr>
+<tr>
+<th scope="col" colspan="1" rowspan="1">1s</th>
+<th scope="col" colspan="1" rowspan="1">2s</th>
+<th scope="col" colspan="1" rowspan="1">3s</th>
+<th scope="col" colspan="1" rowspan="1">Avg.</th>
+<th scope="col" colspan="1" rowspan="1">1s</th>
+<th scope="col" colspan="1" rowspan="1">2s</th>
+<th scope="col" colspan="1" rowspan="1">3s</th>
+<th scope="col" colspan="1" rowspan="1">Avg.</th>
+</tr>
+</thead><tbody>
+<tr>
+<th scope="row">OccWorld-O</th>
+<td>O/Traj.</td>
+<td>25.78</td>
+<td>15.14</td>
+<td>10.51</td>
+<td>17.14</td>
+<td>34.63</td>
+<td>25.07</td>
+<td>20.18</td>
+<td>26.63</td>
+<td>18.00</td>
+</tr>
+<tr>
+<th scope="row">UniScene</th>
+<td>O/Traj.&amp;Box&amp;Map</td>
+<td>35.37</td>
+<td>29.59</td>
+<td>25.08</td>
+<td>30.01</td>
+<td>38.34</td>
+<td>32.70</td>
+<td>29.09</td>
+<td>33.38</td>
+<td>-</td>
+</tr>
+<tr>
+<th scope="row">I²-World</th>
+<td>O/Traj.</td>
+<td>47.62</td>
+<td>38.58</td>
+<td>32.98</td>
+<td>39.73</td>
+<td>54.29</td>
+<td>49.43</td>
+<td>45.69</td>
+<td>49.80</td>
+<td>37.04</td>
+</tr>
+<tr>
+<th scope="row">GenieDrive</th>
+<td>O/Traj.</td>
+<td>50.47</td>
+<td>41.47</td>
+<td>35.83</td>
+<td>42.59</td>
+<td>56.87</td>
+<td>51.46</td>
+<td>47.08</td>
+<td>51.80</td>
+<td>41.38</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-T* (Ours)</th>
+<td>O/Traj.</td>
+<td>52.92</td>
+<td>44.54</td>
+<td>38.37</td>
+<td>45.28</td>
+<td>57.64</td>
+<td>53.10</td>
+<td>49.67</td>
+<td>53.47</td>
+<td>48.25</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-T (Ours)</th>
+<td>O&amp;L/Traj.</td>
+<td>53.43</td>
+<td>45.21</td>
+<td>39.39</td>
+<td>46.01</td>
+<td>61.76</td>
+<td>57.34</td>
+<td>53.29</td>
+<td>57.46</td>
+<td>45.20</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-TBM (Ours)</th>
+<td>O&amp;L/Traj.&amp;Box&amp;Map</td>
+<td>59.50</td>
+<td>54.78</td>
+<td>51.16</td>
+<td>55.15</td>
+<td>62.52</td>
+<td>58.76</td>
+<td>55.19</td>
+<td>58.82</td>
+<td>42.46</td>
+</tr>
+<tr>
+<th scope="row">DOME-STC</th>
+<td>C/Traj.</td>
+<td>17.79</td>
+<td>14.23</td>
+<td>11.58</td>
+<td>14.53</td>
+<td>26.39</td>
+<td>23.20</td>
+<td>20.42</td>
+<td>23.34</td>
+<td>2.75</td>
+</tr>
+<tr>
+<th scope="row">I²-World-STC</th>
+<td>C/Traj.</td>
+<td>21.67</td>
+<td>18.78</td>
+<td>16.47</td>
+<td>18.97</td>
+<td>30.55</td>
+<td>28.76</td>
+<td>26.99</td>
+<td>28.77</td>
+<td>4.21</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-STC (Ours)</th>
+<td>C&amp;L/Traj.</td>
+<td>23.01</td>
+<td>20.57</td>
+<td>18.46</td>
+<td>20.68</td>
+<td>32.97</td>
+<td>31.77</td>
+<td>30.32</td>
+<td>31.69</td>
+<td>5.01</td>
+</tr>
+</tbody></table></div>
+<details class="paper-table-note"><summary>Evaluation setup</summary><p>C: camera; O: occupancy; L: LiDAR. Traj.: ego trajectory; Box/Map: additional scene conditions. * marks the single-modality variant. Model FPS uses one RTX 4090 and excludes decoding.</p></details></div>
+<div id="result-lidar" class="paper-result-panel" role="tabpanel" aria-labelledby="result-tab-lidar" tabindex="0" hidden>
+<div class="paper-table-heading"><h3>nuScenes LiDAR forecasting</h3><a href="https://arxiv.org/html/2611.11912v1#S4.T2">Table 2 in the paper ↗</a></div>
+<div class="table-scroll"><table class="paper-results-table"><thead>
+<tr>
+<th scope="col" colspan="1" rowspan="2">Method</th>
+<th scope="col" colspan="1" rowspan="2">Input/Condition</th>
+<th scope="colgroup" colspan="4" rowspan="1">Forecasting Quality( m² ) ↓</th>
+<th scope="colgroup" colspan="3" rowspan="1">Generation Quality</th>
+<th scope="col" colspan="1" rowspan="2">FPS-E2E ↑</th>
+</tr>
+<tr>
+<th scope="col" colspan="1" rowspan="1">CD @ 1s</th>
+<th scope="col" colspan="1" rowspan="1">CD @ 2s</th>
+<th scope="col" colspan="1" rowspan="1">CD @ 3s</th>
+<th scope="col" colspan="1" rowspan="1">Avg.</th>
+<th scope="col" colspan="1" rowspan="1">FPD ↓</th>
+<th scope="col" colspan="1" rowspan="1">B-MMD ↓</th>
+<th scope="col" colspan="1" rowspan="1">B-JSD ↓</th>
+</tr>
+</thead><tbody>
+<tr>
+<th scope="row">HERMES</th>
+<td>C/Traj.</td>
+<td>0.78</td>
+<td>0.95</td>
+<td>1.17</td>
+<td>0.97</td>
+<td>105.96</td>
+<td>21.04</td>
+<td>4.01</td>
+<td>0.51</td>
+</tr>
+<tr>
+<th scope="row">OpenDWM-DiT</th>
+<td>L/Traj.&amp;Box&amp;Map</td>
+<td>1.96</td>
+<td>2.78</td>
+<td>3.21</td>
+<td>2.65</td>
+<td>381.91</td>
+<td>5.73</td>
+<td>19.90</td>
+<td>0.10</td>
+</tr>
+<tr>
+<th scope="row">LaGen</th>
+<td>L/Traj.&amp;Box&amp;Map</td>
+<td>0.61</td>
+<td>0.81</td>
+<td>1.08</td>
+<td>0.83</td>
+<td>-</td>
+<td>-</td>
+<td>3.97</td>
+<td>-</td>
+</tr>
+<tr>
+<th scope="row">UniScene</th>
+<td>O/Traj.&amp;Box&amp;Map</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>976.47</td>
+<td>13.61</td>
+<td>31.55</td>
+<td>0.19</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-T* (Ours)</th>
+<td>L/Traj.</td>
+<td>0.46</td>
+<td>0.81</td>
+<td>1.18</td>
+<td>0.82</td>
+<td>8.84</td>
+<td>2.68</td>
+<td>4.54</td>
+<td>28.16</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-T (Ours)</th>
+<td>O&amp;L/Traj.</td>
+<td>0.42</td>
+<td>0.68</td>
+<td>0.98</td>
+<td>0.70</td>
+<td>5.16</td>
+<td>0.76</td>
+<td>2.96</td>
+<td>26.26</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-TBM* (Ours)</th>
+<td>L/Traj.&amp;Box&amp;Map</td>
+<td>0.40</td>
+<td>0.62</td>
+<td>0.88</td>
+<td>0.63</td>
+<td>4.95</td>
+<td>0.91</td>
+<td>3.15</td>
+<td>27.04</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-TBM (Ours)</th>
+<td>O&amp;L/Traj.&amp;Box&amp;Map</td>
+<td>0.39</td>
+<td>0.58</td>
+<td>0.78</td>
+<td>0.58</td>
+<td>4.68</td>
+<td>0.77</td>
+<td>2.94</td>
+<td>25.31</td>
+</tr>
+</tbody></table></div>
+<details class="paper-table-note"><summary>Evaluation setup</summary><p>B-MMD and B-JSD follow the paper’s scaling factors of 10⁴ and 10². FPS-E2E includes decoding. * marks the single-modality variant; input and condition columns preserve the paper’s settings.</p></details></div>
+<div id="result-long-horizon" class="paper-result-panel" role="tabpanel" aria-labelledby="result-tab-long-horizon" tabindex="0" hidden>
+<div class="paper-table-heading"><h3>nuScenes long-horizon forecasting</h3><a href="https://arxiv.org/html/2611.11912v1#S4.T3">Table 3 in the paper ↗</a></div>
+<div class="table-scroll"><table class="paper-results-table"><thead>
+<tr>
+<th scope="col" colspan="1" rowspan="2">Method</th>
+<th scope="colgroup" colspan="3" rowspan="1">Occ. mIoU ( % ) ↑</th>
+<th scope="colgroup" colspan="2" rowspan="1">LiDAR ( m² ) ↓</th>
+</tr>
+<tr>
+<th scope="col" colspan="1" rowspan="1">4s</th>
+<th scope="col" colspan="1" rowspan="1">5s</th>
+<th scope="col" colspan="1" rowspan="1">6s</th>
+<th scope="col" colspan="1" rowspan="1">CD @ 4.0s</th>
+<th scope="col" colspan="1" rowspan="1">CD @ 5.5s</th>
+</tr>
+</thead><tbody>
+<tr>
+<th scope="row">I²-World</th>
+<td>28.59</td>
+<td>25.32</td>
+<td>22.55</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<th scope="row">GenieDrive</th>
+<td>31.16</td>
+<td>27.17</td>
+<td>23.66</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<th scope="row">LaGen</th>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>1.32</td>
+<td>1.73</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-T</th>
+<td>34.01</td>
+<td>30.70</td>
+<td>27.48</td>
+<td>1.49</td>
+<td>2.12</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-TBM</th>
+<td>48.16</td>
+<td>45.74</td>
+<td>43.52</td>
+<td>1.10</td>
+<td>1.52</td>
+</tr>
+</tbody></table></div>
+<details class="paper-table-note"><summary>Evaluation setup</summary><p>Occupancy is reported at 4, 5 and 6 seconds; LiDAR CD is reported at 4.0 and 5.5 seconds.</p></details></div>
+<div id="result-waymo" class="paper-result-panel" role="tabpanel" aria-labelledby="result-tab-waymo" tabindex="0" hidden>
+<div class="paper-table-heading"><h3>Waymo generalization</h3><a href="https://arxiv.org/html/2611.11912v1#S4.T4">Table 4 in the paper ↗</a></div>
+<div class="table-scroll"><table class="paper-results-table"><thead>
+<tr>
+<th scope="col" colspan="1" rowspan="2">Method</th>
+<th scope="colgroup" colspan="2" rowspan="1">Occupancy ( % ) ↑</th>
+<th scope="colgroup" colspan="2" rowspan="1">LiDAR ( m² ) ↓</th>
+</tr>
+<tr>
+<th scope="col" colspan="1" rowspan="1">Avg.mIoU</th>
+<th scope="col" colspan="1" rowspan="1">Avg.IoU</th>
+<th scope="col" colspan="1" rowspan="1">CD @ 1s</th>
+<th scope="col" colspan="1" rowspan="1">CD @ 3s</th>
+</tr>
+</thead><tbody>
+<tr>
+<th scope="row">OpenDWM†</th>
+<td>-</td>
+<td>-</td>
+<td>2.27</td>
+<td>3.35</td>
+</tr>
+<tr>
+<th scope="row">I²-World</th>
+<td>36.38</td>
+<td>52.36</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-T</th>
+<td>41.31</td>
+<td>58.30</td>
+<td>0.91</td>
+<td>1.77</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">LO-World-T†</th>
+<td>46.00</td>
+<td>61.08</td>
+<td>0.51</td>
+<td>1.28</td>
+</tr>
+</tbody></table></div>
+<details class="paper-table-note"><summary>Evaluation setup</summary><p>† marks Waymo fine-tuning; unmarked models use zero-shot transfer. The paper’s fine-tuning split contains 50 training sequences.</p></details></div>
+<div id="result-video" class="paper-result-panel" role="tabpanel" aria-labelledby="result-tab-video" tabindex="0" hidden>
+<div class="paper-table-heading"><h3>nuScenes downstream video generation</h3><a href="https://arxiv.org/html/2611.11912v1#S4.T5">Table 5 in the paper ↗</a></div>
+<div class="table-scroll"><table class="paper-results-table"><thead>
+<tr>
+<th scope="col" colspan="1" rowspan="1">Method</th>
+<th scope="col" colspan="1" rowspan="1">Frames</th>
+<th scope="col" colspan="1" rowspan="1">Condition</th>
+<th scope="col" colspan="1" rowspan="1">FVD ↓</th>
+<th scope="col" colspan="1" rowspan="1">mIoU ↑</th>
+<th scope="col" colspan="1" rowspan="1">mAP ↑</th>
+</tr>
+</thead><tbody>
+<tr>
+<th scope="row">MagicDrive</th>
+<td>60</td>
+<td>BEV + Box</td>
+<td>217.94</td>
+<td>18.27</td>
+<td>11.86</td>
+</tr>
+<tr>
+<th scope="row">UniScene</th>
+<td>32</td>
+<td>2 Hz GT Occ.</td>
+<td>610.15</td>
+<td>18.59</td>
+<td>6.24</td>
+</tr>
+<tr>
+<th scope="row">GenieDrive</th>
+<td>81</td>
+<td>2 Hz GT Occ.</td>
+<td>92.78</td>
+<td>31.03</td>
+<td>18.89</td>
+</tr>
+<tr class="paper-ours">
+<th scope="row">Ours</th>
+<td>81</td>
+<td>12 Hz Pred. Occ.</td>
+<td>60.41</td>
+<td>34.83</td>
+<td>27.15</td>
+</tr>
+<tr>
+<th scope="row">Oracle</th>
+<td>81</td>
+<td>12 Hz GT Occ.</td>
+<td>40.78</td>
+<td>36.47</td>
+<td>30.24</td>
+</tr>
+</tbody></table></div>
+<details class="paper-table-note"><summary>Evaluation setup</summary><p>Oracle uses 12 Hz ground-truth occupancy. Ours conditions downstream video generation on predicted 12 Hz occupancy; sequence lengths and conditions are retained for every baseline.</p></details></div>
+    </section>
+
+    <section id="citation" class="citation-section section-anchor"><div class="container citation-inner"><div><span class="section-overline">Build on this work</span><h2>Citation</h2><p>If you find LO-World useful for your research,<br>please consider citing our paper.</p><a href="https://arxiv.org/abs/2611.11912">Read the paper <svg class="icon"><use href="#i-arrow"/></svg></a></div><div class="citation-code"><div class="code-topline"><span>BibTeX</span><button id="copy-citation" type="button"><svg class="icon"><use href="#i-copy"/></svg><span>Copy</span></button></div><pre><code id="bibtex">@misc{liao2026loworld,
+  title={LO-World: Unified BEV Latent Modeling for
+    Joint 4D Occupancy and LiDAR Forecasting},
+  author={Zhimin Liao and Ping Wei and Kai Mao
+    and Shuaijia Chen},
+  year={2026},
+  eprint={2611.11912},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2611.11912}
+}</code></pre><p id="copy-status" class="sr-only" role="status"></p></div></div></section>
+  </main>
+  <footer class="container"><div class="footer-main"><a class="brand" href="#top">LO-World<span class="footer-year">2026</span></a><div><a href="https://arxiv.org/abs/2611.11912">Paper</a><a href="https://github.com/lzzzzzm/LO-World">Code</a><a href="https://huggingface.co/JimmyLiaoo/LO-World">Models</a></div></div><p>Unified BEV Latent Modeling for Joint 4D Occupancy and LiDAR Forecasting</p></footer>
+  <dialog id="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-topline"><h2 id="lightbox-title">Enlarged view</h2><button id="close-lightbox" type="button" aria-label="Close enlarged view">Close <span aria-hidden="true">×</span></button></div><img id="lightbox-image" alt=""><p id="lightbox-note">Shared camera, ego-coordinate crop, and height scale.</p></dialog>
+</body>
+</html>

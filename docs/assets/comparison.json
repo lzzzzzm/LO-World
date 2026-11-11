@@ -1,0 +1,1225 @@
+{
+  "scenes": [
+    {
+      "id": "scene-0103",
+      "label": "nuScenes \u00b7 scene-0103",
+      "title": "Pedestrians & cyclist",
+      "description": "Many peds right, wait for turning car, long bike rack left, cyclist",
+      "preview": "assets/lidar/scene-0103/preview.jpg",
+      "split": "validation",
+      "seed": 0,
+      "current_token": "d0ecf474e0e64950aa265cd44b9c9d75",
+      "frames": [
+        {
+          "seconds": 0.5,
+          "actual_seconds": 0.5019421577453613,
+          "token": "456ec36cb4a44ca78f36fbd90c0c34fa",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_01.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_01.png",
+            "loworld": "assets/lidar/scene-0103/loworld_01.png"
+          },
+          "cd": {
+            "opendwm": 3.3799424171447754,
+            "loworld": 0.9758802652359009
+          },
+          "point_counts": {
+            "gt": 33195,
+            "opendwm": 11760,
+            "loworld": 26418
+          }
+        },
+        {
+          "seconds": 1.0,
+          "actual_seconds": 1.0003139972686768,
+          "token": "6bfd42cf0aba4f1a94ec11fa43e2dd92",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_02.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_02.png",
+            "loworld": "assets/lidar/scene-0103/loworld_02.png"
+          },
+          "cd": {
+            "opendwm": 3.911367177963257,
+            "loworld": 1.1002094745635986
+          },
+          "point_counts": {
+            "gt": 33129,
+            "opendwm": 11784,
+            "loworld": 26195
+          }
+        },
+        {
+          "seconds": 1.5,
+          "actual_seconds": 1.5001749992370605,
+          "token": "0af0feb5b1394b928dd13d648de898f5",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_03.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_03.png",
+            "loworld": "assets/lidar/scene-0103/loworld_03.png"
+          },
+          "cd": {
+            "opendwm": 3.7006938457489014,
+            "loworld": 1.0720930099487305
+          },
+          "point_counts": {
+            "gt": 32975,
+            "opendwm": 11337,
+            "loworld": 26146
+          }
+        },
+        {
+          "seconds": 2.0,
+          "actual_seconds": 1.9995110034942627,
+          "token": "61d9340c5ad8418dafe7a4af1b96e6b9",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_04.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_04.png",
+            "loworld": "assets/lidar/scene-0103/loworld_04.png"
+          },
+          "cd": {
+            "opendwm": 3.7808303833007812,
+            "loworld": 1.164678692817688
+          },
+          "point_counts": {
+            "gt": 32855,
+            "opendwm": 11026,
+            "loworld": 25742
+          }
+        },
+        {
+          "seconds": 2.5,
+          "actual_seconds": 2.4993841648101807,
+          "token": "9e7683e8586542a1b6032980c45f15ce",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_05.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_05.png",
+            "loworld": "assets/lidar/scene-0103/loworld_05.png"
+          },
+          "cd": {
+            "opendwm": 3.7379324436187744,
+            "loworld": 1.1717886924743652
+          },
+          "point_counts": {
+            "gt": 32496,
+            "opendwm": 11022,
+            "loworld": 25483
+          }
+        },
+        {
+          "seconds": 3.0,
+          "actual_seconds": 2.999268054962158,
+          "token": "cc57c1ea80fe46a7abddfdb15654c872",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_06.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_06.png",
+            "loworld": "assets/lidar/scene-0103/loworld_06.png"
+          },
+          "cd": {
+            "opendwm": 4.468961715698242,
+            "loworld": 1.1287604570388794
+          },
+          "point_counts": {
+            "gt": 32426,
+            "opendwm": 10471,
+            "loworld": 25154
+          }
+        },
+        {
+          "seconds": 3.5,
+          "actual_seconds": 3.4488279819488525,
+          "token": "4cf5d6c3f6ab42aab23f67b5a9782d1a",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_07.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_07.png",
+            "loworld": "assets/lidar/scene-0103/loworld_07.png"
+          },
+          "cd": {
+            "opendwm": 5.009044647216797,
+            "loworld": 1.3726685047149658
+          },
+          "point_counts": {
+            "gt": 32308,
+            "opendwm": 10516,
+            "loworld": 25254
+          }
+        },
+        {
+          "seconds": 4.0,
+          "actual_seconds": 3.9990150928497314,
+          "token": "6d9984d09d52479e837da2fd09e192cc",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_08.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_08.png",
+            "loworld": "assets/lidar/scene-0103/loworld_08.png"
+          },
+          "cd": {
+            "opendwm": 6.170588970184326,
+            "loworld": 1.8244762420654297
+          },
+          "point_counts": {
+            "gt": 32400,
+            "opendwm": 10291,
+            "loworld": 25448
+          }
+        },
+        {
+          "seconds": 4.5,
+          "actual_seconds": 4.49891209602356,
+          "token": "38a28a3aaf2647f2a8c0e90e31267bf8",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_09.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_09.png",
+            "loworld": "assets/lidar/scene-0103/loworld_09.png"
+          },
+          "cd": {
+            "opendwm": 6.430589199066162,
+            "loworld": 1.718476414680481
+          },
+          "point_counts": {
+            "gt": 32338,
+            "opendwm": 10364,
+            "loworld": 25313
+          }
+        },
+        {
+          "seconds": 5.0,
+          "actual_seconds": 4.9987711906433105,
+          "token": "6402fd1ffaf041d0b9162bd92a7ba0a2",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_10.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_10.png",
+            "loworld": "assets/lidar/scene-0103/loworld_10.png"
+          },
+          "cd": {
+            "opendwm": 5.116424560546875,
+            "loworld": 1.5413458347320557
+          },
+          "point_counts": {
+            "gt": 32259,
+            "opendwm": 10637,
+            "loworld": 25403
+          }
+        },
+        {
+          "seconds": 5.5,
+          "actual_seconds": 5.498644113540649,
+          "token": "ce94ef7a0522468e81c0e2b3a2f1e12d",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_11.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_11.png",
+            "loworld": "assets/lidar/scene-0103/loworld_11.png"
+          },
+          "cd": {
+            "opendwm": 5.955629348754883,
+            "loworld": 1.565219521522522
+          },
+          "point_counts": {
+            "gt": 32450,
+            "opendwm": 9719,
+            "loworld": 25679
+          }
+        },
+        {
+          "seconds": 6.0,
+          "actual_seconds": 5.999091148376465,
+          "token": "9fcdc52b791045e99c623c5fc643331f",
+          "images": {
+            "gt": "assets/lidar/scene-0103/gt_12.png",
+            "opendwm": "assets/lidar/scene-0103/opendwm_12.png",
+            "loworld": "assets/lidar/scene-0103/loworld_12.png"
+          },
+          "cd": {
+            "opendwm": 5.52631950378418,
+            "loworld": 1.6157336235046387
+          },
+          "point_counts": {
+            "gt": 32517,
+            "opendwm": 9863,
+            "loworld": 25675
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-0003",
+      "label": "nuScenes \u00b7 scene-0003",
+      "title": "Parking-lot exit",
+      "description": "Parking lot, barrier, exit parking lot",
+      "preview": "assets/lidar/scene-0003/preview.jpg",
+      "split": "validation",
+      "seed": 0,
+      "current_token": "cc50000970584ba5aaf14760b1ced696",
+      "frames": [
+        {
+          "seconds": 0.5,
+          "actual_seconds": 0.4993431568145752,
+          "token": "21b99febc5c14f7385e787fe81e96670",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_01.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_01.png",
+            "loworld": "assets/lidar/scene-0003/loworld_01.png"
+          },
+          "cd": {
+            "opendwm": 2.7905983924865723,
+            "loworld": 1.047571063041687
+          },
+          "point_counts": {
+            "gt": 31980,
+            "opendwm": 10417,
+            "loworld": 26077
+          }
+        },
+        {
+          "seconds": 1.0,
+          "actual_seconds": 0.9997639656066895,
+          "token": "cd908fdce67249f3a8a14b987f00592e",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_02.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_02.png",
+            "loworld": "assets/lidar/scene-0003/loworld_02.png"
+          },
+          "cd": {
+            "opendwm": 2.4475362300872803,
+            "loworld": 1.0285582542419434
+          },
+          "point_counts": {
+            "gt": 32106,
+            "opendwm": 9953,
+            "loworld": 25951
+          }
+        },
+        {
+          "seconds": 1.5,
+          "actual_seconds": 1.4996590614318848,
+          "token": "6b9af38cbf654171870cb14b4ae89fd6",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_03.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_03.png",
+            "loworld": "assets/lidar/scene-0003/loworld_03.png"
+          },
+          "cd": {
+            "opendwm": 2.5797314643859863,
+            "loworld": 1.1620736122131348
+          },
+          "point_counts": {
+            "gt": 32193,
+            "opendwm": 10146,
+            "loworld": 25931
+          }
+        },
+        {
+          "seconds": 2.0,
+          "actual_seconds": 1.9491870403289795,
+          "token": "a0edf6edd121431785948038c54e036e",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_04.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_04.png",
+            "loworld": "assets/lidar/scene-0003/loworld_04.png"
+          },
+          "cd": {
+            "opendwm": 2.7533514499664307,
+            "loworld": 1.2967318296432495
+          },
+          "point_counts": {
+            "gt": 32243,
+            "opendwm": 10424,
+            "loworld": 25962
+          }
+        },
+        {
+          "seconds": 2.5,
+          "actual_seconds": 2.448513984680176,
+          "token": "9281ea172d9e43528e65fca81e2006d4",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_05.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_05.png",
+            "loworld": "assets/lidar/scene-0003/loworld_05.png"
+          },
+          "cd": {
+            "opendwm": 3.5523178577423096,
+            "loworld": 1.2693811655044556
+          },
+          "point_counts": {
+            "gt": 32208,
+            "opendwm": 10138,
+            "loworld": 25946
+          }
+        },
+        {
+          "seconds": 3.0,
+          "actual_seconds": 2.9483909606933594,
+          "token": "6180726fc8744ea2b129ebaad6f79cee",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_06.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_06.png",
+            "loworld": "assets/lidar/scene-0003/loworld_06.png"
+          },
+          "cd": {
+            "opendwm": 4.114467144012451,
+            "loworld": 1.0522338151931763
+          },
+          "point_counts": {
+            "gt": 32231,
+            "opendwm": 10450,
+            "loworld": 26059
+          }
+        },
+        {
+          "seconds": 3.5,
+          "actual_seconds": 3.498591184616089,
+          "token": "1ac0914c98b8488cb3521efeba354496",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_07.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_07.png",
+            "loworld": "assets/lidar/scene-0003/loworld_07.png"
+          },
+          "cd": {
+            "opendwm": 4.579456806182861,
+            "loworld": 1.1288453340530396
+          },
+          "point_counts": {
+            "gt": 32215,
+            "opendwm": 10183,
+            "loworld": 25984
+          }
+        },
+        {
+          "seconds": 4.0,
+          "actual_seconds": 3.9990530014038086,
+          "token": "2f5de0aeca704127925cf8490ff5a21d",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_08.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_08.png",
+            "loworld": "assets/lidar/scene-0003/loworld_08.png"
+          },
+          "cd": {
+            "opendwm": 4.554694175720215,
+            "loworld": 1.2737171649932861
+          },
+          "point_counts": {
+            "gt": 32153,
+            "opendwm": 10271,
+            "loworld": 25941
+          }
+        },
+        {
+          "seconds": 4.5,
+          "actual_seconds": 4.448584079742432,
+          "token": "e4df3ac5874d49b7a3553035cd735902",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_09.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_09.png",
+            "loworld": "assets/lidar/scene-0003/loworld_09.png"
+          },
+          "cd": {
+            "opendwm": 4.847800254821777,
+            "loworld": 1.4121023416519165
+          },
+          "point_counts": {
+            "gt": 31938,
+            "opendwm": 10180,
+            "loworld": 25729
+          }
+        },
+        {
+          "seconds": 5.0,
+          "actual_seconds": 4.998768091201782,
+          "token": "dc878ebb5b1e43eb9442d9361854613e",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_10.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_10.png",
+            "loworld": "assets/lidar/scene-0003/loworld_10.png"
+          },
+          "cd": {
+            "opendwm": 4.257987976074219,
+            "loworld": 1.3669942617416382
+          },
+          "point_counts": {
+            "gt": 32176,
+            "opendwm": 10304,
+            "loworld": 25897
+          }
+        },
+        {
+          "seconds": 5.5,
+          "actual_seconds": 5.499287128448486,
+          "token": "e617edf72860495abd928aaf57dfa5fa",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_11.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_11.png",
+            "loworld": "assets/lidar/scene-0003/loworld_11.png"
+          },
+          "cd": {
+            "opendwm": 4.124186038970947,
+            "loworld": 1.9776272773742676
+          },
+          "point_counts": {
+            "gt": 32126,
+            "opendwm": 10240,
+            "loworld": 26005
+          }
+        },
+        {
+          "seconds": 6.0,
+          "actual_seconds": 5.99913215637207,
+          "token": "7c0aa537b98344bea85226ba8148ae98",
+          "images": {
+            "gt": "assets/lidar/scene-0003/gt_12.png",
+            "opendwm": "assets/lidar/scene-0003/opendwm_12.png",
+            "loworld": "assets/lidar/scene-0003/loworld_12.png"
+          },
+          "cd": {
+            "opendwm": 3.9202544689178467,
+            "loworld": 1.3030749559402466
+          },
+          "point_counts": {
+            "gt": 32131,
+            "opendwm": 9777,
+            "loworld": 26197
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-0329",
+      "label": "nuScenes \u00b7 scene-0329",
+      "title": "Parked trucks & right turn",
+      "description": "Parked trucks, parked cars, avoid parked truck, ped, turn right",
+      "preview": "assets/lidar/scene-0329/preview.jpg",
+      "split": "validation",
+      "seed": 0,
+      "current_token": "10a3ee039c4c482ab220e69c1e420031",
+      "frames": [
+        {
+          "seconds": 0.5,
+          "actual_seconds": 0.4993140697479248,
+          "token": "da52113f2bed429f9666830c6fe3f2b4",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_01.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_01.png",
+            "loworld": "assets/lidar/scene-0329/loworld_01.png"
+          },
+          "cd": {
+            "opendwm": 2.3829822540283203,
+            "loworld": 1.7106659412384033
+          },
+          "point_counts": {
+            "gt": 33650,
+            "opendwm": 8091,
+            "loworld": 23168
+          }
+        },
+        {
+          "seconds": 1.0,
+          "actual_seconds": 0.9997439384460449,
+          "token": "15aade949000400ea701dbd79710f8f0",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_02.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_02.png",
+            "loworld": "assets/lidar/scene-0329/loworld_02.png"
+          },
+          "cd": {
+            "opendwm": 3.1627964973449707,
+            "loworld": 2.019563913345337
+          },
+          "point_counts": {
+            "gt": 33666,
+            "opendwm": 8291,
+            "loworld": 23320
+          }
+        },
+        {
+          "seconds": 1.5,
+          "actual_seconds": 1.5001931190490723,
+          "token": "305eabe98b6a445799cad8d843047cae",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_03.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_03.png",
+            "loworld": "assets/lidar/scene-0329/loworld_03.png"
+          },
+          "cd": {
+            "opendwm": 4.375797748565674,
+            "loworld": 1.410591721534729
+          },
+          "point_counts": {
+            "gt": 33745,
+            "opendwm": 8575,
+            "loworld": 24620
+          }
+        },
+        {
+          "seconds": 2.0,
+          "actual_seconds": 2.000601053237915,
+          "token": "2a8814846e6940cbac163a9974837204",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_04.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_04.png",
+            "loworld": "assets/lidar/scene-0329/loworld_04.png"
+          },
+          "cd": {
+            "opendwm": 5.095536231994629,
+            "loworld": 1.5455564260482788
+          },
+          "point_counts": {
+            "gt": 33533,
+            "opendwm": 9048,
+            "loworld": 24679
+          }
+        },
+        {
+          "seconds": 2.5,
+          "actual_seconds": 2.498816967010498,
+          "token": "bbe3c0605629491ba2dc5eef6ff2d3d4",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_05.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_05.png",
+            "loworld": "assets/lidar/scene-0329/loworld_05.png"
+          },
+          "cd": {
+            "opendwm": 7.755213737487793,
+            "loworld": 1.69118070602417
+          },
+          "point_counts": {
+            "gt": 33365,
+            "opendwm": 9243,
+            "loworld": 25148
+          }
+        },
+        {
+          "seconds": 3.0,
+          "actual_seconds": 2.9986939430236816,
+          "token": "ca6d6807f08a4a7b86f748820069eae7",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_06.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_06.png",
+            "loworld": "assets/lidar/scene-0329/loworld_06.png"
+          },
+          "cd": {
+            "opendwm": 10.155608177185059,
+            "loworld": 1.9574464559555054
+          },
+          "point_counts": {
+            "gt": 33469,
+            "opendwm": 8704,
+            "loworld": 24441
+          }
+        },
+        {
+          "seconds": 3.5,
+          "actual_seconds": 3.4991440773010254,
+          "token": "ba27f0e4ca2a40d88ef1d44d2ebdc9e4",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_07.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_07.png",
+            "loworld": "assets/lidar/scene-0329/loworld_07.png"
+          },
+          "cd": {
+            "opendwm": 10.451409339904785,
+            "loworld": 2.257266044616699
+          },
+          "point_counts": {
+            "gt": 33436,
+            "opendwm": 8503,
+            "loworld": 24137
+          }
+        },
+        {
+          "seconds": 4.0,
+          "actual_seconds": 3.999572992324829,
+          "token": "d2695a8237424836a115110981fa9e98",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_08.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_08.png",
+            "loworld": "assets/lidar/scene-0329/loworld_08.png"
+          },
+          "cd": {
+            "opendwm": 11.10421371459961,
+            "loworld": 2.29764986038208
+          },
+          "point_counts": {
+            "gt": 33530,
+            "opendwm": 8106,
+            "loworld": 23680
+          }
+        },
+        {
+          "seconds": 4.5,
+          "actual_seconds": 4.4999799728393555,
+          "token": "b7efe50e943141a4b447b2995bb5a6e9",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_09.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_09.png",
+            "loworld": "assets/lidar/scene-0329/loworld_09.png"
+          },
+          "cd": {
+            "opendwm": 11.267247200012207,
+            "loworld": 1.929704189300537
+          },
+          "point_counts": {
+            "gt": 33534,
+            "opendwm": 7817,
+            "loworld": 24267
+          }
+        },
+        {
+          "seconds": 5.0,
+          "actual_seconds": 4.999867916107178,
+          "token": "108269b3def84196a54f082bcf5ea972",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_10.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_10.png",
+            "loworld": "assets/lidar/scene-0329/loworld_10.png"
+          },
+          "cd": {
+            "opendwm": 11.261825561523438,
+            "loworld": 2.503376007080078
+          },
+          "point_counts": {
+            "gt": 33629,
+            "opendwm": 7932,
+            "loworld": 23383
+          }
+        },
+        {
+          "seconds": 5.5,
+          "actual_seconds": 5.500287055969238,
+          "token": "f954522c65fe49208c969909442ca375",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_11.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_11.png",
+            "loworld": "assets/lidar/scene-0329/loworld_11.png"
+          },
+          "cd": {
+            "opendwm": 11.434771537780762,
+            "loworld": 2.7788033485412598
+          },
+          "point_counts": {
+            "gt": 33658,
+            "opendwm": 7578,
+            "loworld": 23545
+          }
+        },
+        {
+          "seconds": 6.0,
+          "actual_seconds": 6.000714063644409,
+          "token": "ba53f1ae83484a8abb8f8777f7a073e2",
+          "images": {
+            "gt": "assets/lidar/scene-0329/gt_12.png",
+            "opendwm": "assets/lidar/scene-0329/opendwm_12.png",
+            "loworld": "assets/lidar/scene-0329/loworld_12.png"
+          },
+          "cd": {
+            "opendwm": 12.304854393005371,
+            "loworld": 2.3252339363098145
+          },
+          "point_counts": {
+            "gt": 33594,
+            "opendwm": 7572,
+            "loworld": 23644
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-0553",
+      "label": "nuScenes \u00b7 scene-0553",
+      "title": "Intersection & crosswalk",
+      "description": "Wait at intersection, bicycle, large truck, peds crossing crosswalk, ped with stroller",
+      "preview": "assets/lidar/scene-0553/preview.jpg",
+      "split": "validation",
+      "seed": 0,
+      "current_token": "ac452a60e8b34a7080c938c904b23057",
+      "frames": [
+        {
+          "seconds": 0.5,
+          "actual_seconds": 0.5004160404205322,
+          "token": "27900b9c3cfb48ed8b49087098d4a15a",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_01.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_01.png",
+            "loworld": "assets/lidar/scene-0553/loworld_01.png"
+          },
+          "cd": {
+            "opendwm": 2.7746493816375732,
+            "loworld": 1.3327436447143555
+          },
+          "point_counts": {
+            "gt": 33386,
+            "opendwm": 9574,
+            "loworld": 23296
+          }
+        },
+        {
+          "seconds": 1.0,
+          "actual_seconds": 1.0002970695495605,
+          "token": "c4f9b75136384ec4a76c4adfc28b4259",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_02.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_02.png",
+            "loworld": "assets/lidar/scene-0553/loworld_02.png"
+          },
+          "cd": {
+            "opendwm": 2.8676555156707764,
+            "loworld": 1.3026870489120483
+          },
+          "point_counts": {
+            "gt": 33401,
+            "opendwm": 9666,
+            "loworld": 23308
+          }
+        },
+        {
+          "seconds": 1.5,
+          "actual_seconds": 1.5002050399780273,
+          "token": "a572dd2e95e94e4db66bb5dbfaf870b5",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_03.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_03.png",
+            "loworld": "assets/lidar/scene-0553/loworld_03.png"
+          },
+          "cd": {
+            "opendwm": 2.874830961227417,
+            "loworld": 1.3309606313705444
+          },
+          "point_counts": {
+            "gt": 33410,
+            "opendwm": 9582,
+            "loworld": 23309
+          }
+        },
+        {
+          "seconds": 2.0,
+          "actual_seconds": 1.9502768516540527,
+          "token": "313a60afcab5481a94a4815e0d1a6496",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_04.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_04.png",
+            "loworld": "assets/lidar/scene-0553/loworld_04.png"
+          },
+          "cd": {
+            "opendwm": 3.0991780757904053,
+            "loworld": 1.3079042434692383
+          },
+          "point_counts": {
+            "gt": 33403,
+            "opendwm": 9691,
+            "loworld": 23242
+          }
+        },
+        {
+          "seconds": 2.5,
+          "actual_seconds": 2.450160026550293,
+          "token": "d2ae3c5bbb5343a393882b44d56f8da3",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_05.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_05.png",
+            "loworld": "assets/lidar/scene-0553/loworld_05.png"
+          },
+          "cd": {
+            "opendwm": 3.0309762954711914,
+            "loworld": 1.3102589845657349
+          },
+          "point_counts": {
+            "gt": 33370,
+            "opendwm": 9724,
+            "loworld": 23304
+          }
+        },
+        {
+          "seconds": 3.0,
+          "actual_seconds": 2.950044870376587,
+          "token": "59bd7a9fae8a45bcb76f1847cf09e000",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_06.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_06.png",
+            "loworld": "assets/lidar/scene-0553/loworld_06.png"
+          },
+          "cd": {
+            "opendwm": 3.0714776515960693,
+            "loworld": 1.3181499242782593
+          },
+          "point_counts": {
+            "gt": 33380,
+            "opendwm": 9543,
+            "loworld": 23237
+          }
+        },
+        {
+          "seconds": 3.5,
+          "actual_seconds": 3.449910879135132,
+          "token": "37535cd306954669a2b21578573b93e3",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_07.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_07.png",
+            "loworld": "assets/lidar/scene-0553/loworld_07.png"
+          },
+          "cd": {
+            "opendwm": 3.040809392929077,
+            "loworld": 1.3006961345672607
+          },
+          "point_counts": {
+            "gt": 33414,
+            "opendwm": 9819,
+            "loworld": 23322
+          }
+        },
+        {
+          "seconds": 4.0,
+          "actual_seconds": 3.9503390789031982,
+          "token": "3a064c48e47b489a8b442b8081f877b6",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_08.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_08.png",
+            "loworld": "assets/lidar/scene-0553/loworld_08.png"
+          },
+          "cd": {
+            "opendwm": 1.3544992208480835,
+            "loworld": 1.328845739364624
+          },
+          "point_counts": {
+            "gt": 33416,
+            "opendwm": 9574,
+            "loworld": 23351
+          }
+        },
+        {
+          "seconds": 4.5,
+          "actual_seconds": 4.500541925430298,
+          "token": "d3c0bbf933594f7184e20d761b6416f4",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_09.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_09.png",
+            "loworld": "assets/lidar/scene-0553/loworld_09.png"
+          },
+          "cd": {
+            "opendwm": 3.1631336212158203,
+            "loworld": 1.3024896383285522
+          },
+          "point_counts": {
+            "gt": 33423,
+            "opendwm": 9416,
+            "loworld": 23287
+          }
+        },
+        {
+          "seconds": 5.0,
+          "actual_seconds": 4.950654029846191,
+          "token": "31812a5e8d514b5f8d2fbc50fc007475",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_10.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_10.png",
+            "loworld": "assets/lidar/scene-0553/loworld_10.png"
+          },
+          "cd": {
+            "opendwm": 3.1251909732818604,
+            "loworld": 1.29575514793396
+          },
+          "point_counts": {
+            "gt": 33445,
+            "opendwm": 9587,
+            "loworld": 23197
+          }
+        },
+        {
+          "seconds": 5.5,
+          "actual_seconds": 5.451079845428467,
+          "token": "32e2619879854a83953c08ec8557f3bb",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_11.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_11.png",
+            "loworld": "assets/lidar/scene-0553/loworld_11.png"
+          },
+          "cd": {
+            "opendwm": 2.993232250213623,
+            "loworld": 1.3026831150054932
+          },
+          "point_counts": {
+            "gt": 33382,
+            "opendwm": 9458,
+            "loworld": 23258
+          }
+        },
+        {
+          "seconds": 6.0,
+          "actual_seconds": 5.951531887054443,
+          "token": "4d7cf1ad5f9c4842bb6f135e058deed4",
+          "images": {
+            "gt": "assets/lidar/scene-0553/gt_12.png",
+            "opendwm": "assets/lidar/scene-0553/opendwm_12.png",
+            "loworld": "assets/lidar/scene-0553/loworld_12.png"
+          },
+          "cd": {
+            "opendwm": 2.982686758041382,
+            "loworld": 1.3020676374435425
+          },
+          "point_counts": {
+            "gt": 33436,
+            "opendwm": 9592,
+            "loworld": 23279
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene-0971",
+      "label": "nuScenes \u00b7 scene-0971",
+      "title": "T-junction & pedestrians",
+      "description": "Cross T junction, peds, parked motorcycles, turn right, jaywalker",
+      "preview": "assets/lidar/scene-0971/preview.jpg",
+      "split": "validation",
+      "seed": 0,
+      "current_token": "6d3a51faf6484d67bd6b6345d5f62ab7",
+      "frames": [
+        {
+          "seconds": 0.5,
+          "actual_seconds": 0.4998900890350342,
+          "token": "05e5176b77bb44ed85e6df6ad3aba980",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_01.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_01.png",
+            "loworld": "assets/lidar/scene-0971/loworld_01.png"
+          },
+          "cd": {
+            "opendwm": 2.9171946048736572,
+            "loworld": 0.8261830806732178
+          },
+          "point_counts": {
+            "gt": 32872,
+            "opendwm": 11223,
+            "loworld": 26521
+          }
+        },
+        {
+          "seconds": 1.0,
+          "actual_seconds": 1.000326156616211,
+          "token": "b79c1cac9b7a4dc6a7e08e298be2e18a",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_02.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_02.png",
+            "loworld": "assets/lidar/scene-0971/loworld_02.png"
+          },
+          "cd": {
+            "opendwm": 2.953221559524536,
+            "loworld": 0.877500593662262
+          },
+          "point_counts": {
+            "gt": 32939,
+            "opendwm": 11297,
+            "loworld": 26469
+          }
+        },
+        {
+          "seconds": 1.5,
+          "actual_seconds": 1.5006911754608154,
+          "token": "bcb4f1b8e8af4cbd855f89096d822e69",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_03.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_03.png",
+            "loworld": "assets/lidar/scene-0971/loworld_03.png"
+          },
+          "cd": {
+            "opendwm": 3.117103099822998,
+            "loworld": 0.8866595029830933
+          },
+          "point_counts": {
+            "gt": 32994,
+            "opendwm": 11282,
+            "loworld": 26743
+          }
+        },
+        {
+          "seconds": 2.0,
+          "actual_seconds": 2.000519037246704,
+          "token": "2c167c0154954b56aefd7e0eceaa72a0",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_04.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_04.png",
+            "loworld": "assets/lidar/scene-0971/loworld_04.png"
+          },
+          "cd": {
+            "opendwm": 3.744007110595703,
+            "loworld": 0.9304327964782715
+          },
+          "point_counts": {
+            "gt": 33003,
+            "opendwm": 11418,
+            "loworld": 26753
+          }
+        },
+        {
+          "seconds": 2.5,
+          "actual_seconds": 2.500899076461792,
+          "token": "415d154bbb1347919b340b21903e603e",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_05.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_05.png",
+            "loworld": "assets/lidar/scene-0971/loworld_05.png"
+          },
+          "cd": {
+            "opendwm": 3.511866569519043,
+            "loworld": 0.9574828743934631
+          },
+          "point_counts": {
+            "gt": 33002,
+            "opendwm": 11431,
+            "loworld": 26936
+          }
+        },
+        {
+          "seconds": 3.0,
+          "actual_seconds": 3.001281976699829,
+          "token": "049cb10452884d49a9ed95336af17edf",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_06.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_06.png",
+            "loworld": "assets/lidar/scene-0971/loworld_06.png"
+          },
+          "cd": {
+            "opendwm": 6.793553352355957,
+            "loworld": 0.9723074436187744
+          },
+          "point_counts": {
+            "gt": 33079,
+            "opendwm": 11387,
+            "loworld": 26991
+          }
+        },
+        {
+          "seconds": 3.5,
+          "actual_seconds": 3.5011050701141357,
+          "token": "5fcbd73f4fdb4b0faaf55256bb03cdaf",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_07.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_07.png",
+            "loworld": "assets/lidar/scene-0971/loworld_07.png"
+          },
+          "cd": {
+            "opendwm": 8.782001495361328,
+            "loworld": 1.1681489944458008
+          },
+          "point_counts": {
+            "gt": 33204,
+            "opendwm": 11114,
+            "loworld": 26949
+          }
+        },
+        {
+          "seconds": 4.0,
+          "actual_seconds": 4.000936985015869,
+          "token": "e63daf8508994046ac113057d0ebf6ba",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_08.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_08.png",
+            "loworld": "assets/lidar/scene-0971/loworld_08.png"
+          },
+          "cd": {
+            "opendwm": 8.837767601013184,
+            "loworld": 1.0090078115463257
+          },
+          "point_counts": {
+            "gt": 33237,
+            "opendwm": 10868,
+            "loworld": 26992
+          }
+        },
+        {
+          "seconds": 4.5,
+          "actual_seconds": 4.500773191452026,
+          "token": "ed00752c8ec44d2e9d3f9274e62e4c80",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_09.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_09.png",
+            "loworld": "assets/lidar/scene-0971/loworld_09.png"
+          },
+          "cd": {
+            "opendwm": 8.041342735290527,
+            "loworld": 0.9070079326629639
+          },
+          "point_counts": {
+            "gt": 33195,
+            "opendwm": 10789,
+            "loworld": 26777
+          }
+        },
+        {
+          "seconds": 5.0,
+          "actual_seconds": 5.000617027282715,
+          "token": "12d8d478ed3b43e78feae31551ed3d19",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_10.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_10.png",
+            "loworld": "assets/lidar/scene-0971/loworld_10.png"
+          },
+          "cd": {
+            "opendwm": 12.930734634399414,
+            "loworld": 1.3851227760314941
+          },
+          "point_counts": {
+            "gt": 33035,
+            "opendwm": 11088,
+            "loworld": 26847
+          }
+        },
+        {
+          "seconds": 5.5,
+          "actual_seconds": 5.500465154647827,
+          "token": "f164bf20014d4f96b9701320b1882de6",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_11.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_11.png",
+            "loworld": "assets/lidar/scene-0971/loworld_11.png"
+          },
+          "cd": {
+            "opendwm": 12.379858016967773,
+            "loworld": 1.2706830501556396
+          },
+          "point_counts": {
+            "gt": 32931,
+            "opendwm": 10530,
+            "loworld": 26830
+          }
+        },
+        {
+          "seconds": 6.0,
+          "actual_seconds": 6.000339031219482,
+          "token": "ce0a66937ec741af9defc0fcde1134d5",
+          "images": {
+            "gt": "assets/lidar/scene-0971/gt_12.png",
+            "opendwm": "assets/lidar/scene-0971/opendwm_12.png",
+            "loworld": "assets/lidar/scene-0971/loworld_12.png"
+          },
+          "cd": {
+            "opendwm": 11.023947715759277,
+            "loworld": 1.114050269126892
+          },
+          "point_counts": {
+            "gt": 32717,
+            "opendwm": 10082,
+            "loworld": 26577
+          }
+        }
+      ]
+    }
+  ],
+  "protocol": {
+    "hz": 2,
+    "horizon_seconds": 6,
+    "crop_ego_m": [
+      -40,
+      -40,
+      -1,
+      40,
+      40,
+      5.4
+    ],
+    "metric": "Symmetric mean squared Chamfer distance",
+    "metric_unit": "m\u00b2",
+    "target": "Raw LiDAR, transformed to ego coordinates and cropped equally",
+    "loworld_checkpoint": "bev_world_12f_layout_autoregressive.pth",
+    "opendwm_checkpoint": "lidar_maskgit_temporal_vq80k_layout_ns_150k.pth",
+    "loworld_history": "Current joint OCC/LiDAR latent plus four memory frames",
+    "opendwm_history": "Three reference LiDAR frames including current",
+    "conditions": "Future ego poses, object layouts and map information; model-specific encodings",
+    "note": "Five scenes, one seed per scene; individual scene metrics, not a dataset benchmark. OpenDWM rolls out autoregressively to six seconds."
+  }
+}

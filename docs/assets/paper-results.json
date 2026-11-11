@@ -1,0 +1,1727 @@
+{
+  "paper": "arXiv:2611.11912v1",
+  "tables": [
+    {
+      "id": "occupancy",
+      "label": "Occupancy",
+      "title": "Occ3D-nuScenes occupancy forecasting",
+      "number": 1,
+      "source_url": "https://arxiv.org/html/2611.11912v1#S3.T1",
+      "headers": [
+        [
+          {
+            "text": "Method",
+            "colspan": 1,
+            "rowspan": 2
+          },
+          {
+            "text": "Input/Condition",
+            "colspan": 1,
+            "rowspan": 2
+          },
+          {
+            "text": "mIoU (%) ↑",
+            "colspan": 4,
+            "rowspan": 1
+          },
+          {
+            "text": "IoU (%) ↑",
+            "colspan": 4,
+            "rowspan": 1
+          },
+          {
+            "text": "FPS ↑",
+            "colspan": 1,
+            "rowspan": 2
+          }
+        ],
+        [
+          {
+            "text": "1s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "3s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "Avg.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "3s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "Avg.",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "rows": [
+        [
+          {
+            "text": "OccWorld-O",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "25.78",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "15.14",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "10.51",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "17.14",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "34.63",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "25.07",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "20.18",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "26.63",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "18.00",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "UniScene",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O/Traj.&Box&Map",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "35.37",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "29.59",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "25.08",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "30.01",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "38.34",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "32.70",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "29.09",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "33.38",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "I²-World",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "47.62",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "38.58",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "32.98",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "39.73",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "54.29",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "49.43",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "45.69",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "49.80",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "37.04",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "GenieDrive",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "50.47",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "41.47",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "35.83",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "42.59",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "56.87",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "51.46",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "47.08",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "51.80",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "41.38",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-T* (Ours)",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "52.92",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "44.54",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "38.37",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "45.28",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "57.64",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "53.10",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "49.67",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "53.47",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "48.25",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-T (Ours)",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O&L/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "53.43",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "45.21",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "39.39",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "46.01",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "61.76",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "57.34",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "53.29",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "57.46",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "45.20",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-TBM (Ours)",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O&L/Traj.&Box&Map",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "59.50",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "54.78",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "51.16",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "55.15",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "62.52",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "58.76",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "55.19",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "58.82",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "42.46",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "DOME-STC",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "C/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "17.79",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "14.23",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "11.58",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "14.53",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "26.39",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "23.20",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "20.42",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "23.34",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2.75",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "I²-World-STC",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "C/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "21.67",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "18.78",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "16.47",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "18.97",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "30.55",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "28.76",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "26.99",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "28.77",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "4.21",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-STC (Ours)",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "C&L/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "23.01",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "20.57",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "18.46",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "20.68",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "32.97",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "31.77",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "30.32",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "31.69",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "5.01",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "note": "C: camera; O: occupancy; L: LiDAR. Traj.: ego trajectory; Box/Map: additional scene conditions. * marks the single-modality variant. Model FPS uses one RTX 4090 and excludes decoding."
+    },
+    {
+      "id": "lidar",
+      "label": "LiDAR",
+      "title": "nuScenes LiDAR forecasting",
+      "number": 2,
+      "source_url": "https://arxiv.org/html/2611.11912v1#S4.T2",
+      "headers": [
+        [
+          {
+            "text": "Method",
+            "colspan": 1,
+            "rowspan": 2
+          },
+          {
+            "text": "Input/Condition",
+            "colspan": 1,
+            "rowspan": 2
+          },
+          {
+            "text": "Forecasting Quality( m² ) ↓",
+            "colspan": 4,
+            "rowspan": 1
+          },
+          {
+            "text": "Generation Quality",
+            "colspan": 3,
+            "rowspan": 1
+          },
+          {
+            "text": "FPS-E2E ↑",
+            "colspan": 1,
+            "rowspan": 2
+          }
+        ],
+        [
+          {
+            "text": "CD @ 1s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "CD @ 2s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "CD @ 3s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "Avg.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "FPD ↓",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "B-MMD ↓",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "B-JSD ↓",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "rows": [
+        [
+          {
+            "text": "HERMES",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "C/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.78",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.95",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.17",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.97",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "105.96",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "21.04",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "4.01",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.51",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "OpenDWM-DiT",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "L/Traj.&Box&Map",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.96",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2.78",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "3.21",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2.65",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "381.91",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "5.73",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "19.90",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.10",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LaGen",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "L/Traj.&Box&Map",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.61",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.81",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.08",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.83",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "3.97",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "UniScene",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O/Traj.&Box&Map",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "976.47",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "13.61",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "31.55",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.19",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-T* (Ours)",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "L/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.46",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.81",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.18",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.82",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "8.84",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2.68",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "4.54",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "28.16",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-T (Ours)",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O&L/Traj.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.42",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.68",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.98",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.70",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "5.16",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.76",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2.96",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "26.26",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-TBM* (Ours)",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "L/Traj.&Box&Map",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.40",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.62",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.88",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.63",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "4.95",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.91",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "3.15",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "27.04",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-TBM (Ours)",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "O&L/Traj.&Box&Map",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.39",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.58",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.78",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.58",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "4.68",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.77",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2.94",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "25.31",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "note": "B-MMD and B-JSD follow the paper’s scaling factors of 10⁴ and 10². FPS-E2E includes decoding. * marks the single-modality variant; input and condition columns preserve the paper’s settings."
+    },
+    {
+      "id": "long-horizon",
+      "label": "Long horizon",
+      "title": "nuScenes long-horizon forecasting",
+      "number": 3,
+      "source_url": "https://arxiv.org/html/2611.11912v1#S4.T3",
+      "headers": [
+        [
+          {
+            "text": "Method",
+            "colspan": 1,
+            "rowspan": 2
+          },
+          {
+            "text": "Occ. mIoU ( % ) ↑",
+            "colspan": 3,
+            "rowspan": 1
+          },
+          {
+            "text": "LiDAR ( m² ) ↓",
+            "colspan": 2,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "4s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "5s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "6s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "CD @ 4.0s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "CD @ 5.5s",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "rows": [
+        [
+          {
+            "text": "I²-World",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "28.59",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "25.32",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "22.55",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "GenieDrive",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "31.16",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "27.17",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "23.66",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LaGen",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.32",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.73",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-T",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "34.01",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "30.70",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "27.48",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.49",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2.12",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-TBM",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "48.16",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "45.74",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "43.52",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.10",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.52",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "note": "Occupancy is reported at 4, 5 and 6 seconds; LiDAR CD is reported at 4.0 and 5.5 seconds."
+    },
+    {
+      "id": "waymo",
+      "label": "Waymo",
+      "title": "Waymo generalization",
+      "number": 4,
+      "source_url": "https://arxiv.org/html/2611.11912v1#S4.T4",
+      "headers": [
+        [
+          {
+            "text": "Method",
+            "colspan": 1,
+            "rowspan": 2
+          },
+          {
+            "text": "Occupancy ( % ) ↑",
+            "colspan": 2,
+            "rowspan": 1
+          },
+          {
+            "text": "LiDAR ( m² ) ↓",
+            "colspan": 2,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "Avg.mIoU",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "Avg.IoU",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "CD @ 1s",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "CD @ 3s",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "rows": [
+        [
+          {
+            "text": "OpenDWM†",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2.27",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "3.35",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "I²-World",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "36.38",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "52.36",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "-",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-T",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "41.31",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "58.30",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.91",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.77",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "LO-World-T†",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "46.00",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "61.08",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "0.51",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "1.28",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "note": "† marks Waymo fine-tuning; unmarked models use zero-shot transfer. The paper’s fine-tuning split contains 50 training sequences."
+    },
+    {
+      "id": "video",
+      "label": "Video",
+      "title": "nuScenes downstream video generation",
+      "number": 5,
+      "source_url": "https://arxiv.org/html/2611.11912v1#S4.T5",
+      "headers": [
+        [
+          {
+            "text": "Method",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "Frames",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "Condition",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "FVD ↓",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "mIoU ↑",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "mAP ↑",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "rows": [
+        [
+          {
+            "text": "MagicDrive",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "60",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "BEV + Box",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "217.94",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "18.27",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "11.86",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "UniScene",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "32",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2 Hz GT Occ.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "610.15",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "18.59",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "6.24",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "GenieDrive",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "81",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "2 Hz GT Occ.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "92.78",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "31.03",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "18.89",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "Ours",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "81",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "12 Hz Pred. Occ.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "60.41",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "34.83",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "27.15",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ],
+        [
+          {
+            "text": "Oracle",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "81",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "12 Hz GT Occ.",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "40.78",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "36.47",
+            "colspan": 1,
+            "rowspan": 1
+          },
+          {
+            "text": "30.24",
+            "colspan": 1,
+            "rowspan": 1
+          }
+        ]
+      ],
+      "note": "Oracle uses 12 Hz ground-truth occupancy. Ours conditions downstream video generation on predicted 12 Hz occupancy; sequence lengths and conditions are retained for every baseline."
+    }
+  ]
+}
